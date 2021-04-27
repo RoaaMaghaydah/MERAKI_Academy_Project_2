@@ -4,7 +4,29 @@ body{
 
     background-size:1400px 400px;
     background-repeat: no-repeat;
+
+
+    
 }
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+    text-decoration: none;
+    font-size:30px;
+    display:inline;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+a:active{
+   
+    text-decoration:underline;
+}
+
 
 .div1{
 display: grid;
@@ -20,20 +42,36 @@ color: white;
 .perant{
 
     display: grid;
+    grid-template-columns: 300px 300px;
     gap: 50px;
-  
+
 }
 .start{
-    justify-self: center;
+    justify-self: end;
 }
 
 .p{
 position: relative;
-top :40px;
+top :30px;
 left: 250px;
- color: rgb(65, 4, 43));
- font-size: 60px;
+ color: rgb(65, 4, 43);
+ font-size: 70px;
  font-family: 'Times New Roman', Times, serif;
  font-weight: bold;
  font-style: italic;
+ text-shadow:  0 0 10px white,0 0 5px white;
+}
+
+#theme{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    position: sticky;
+    bottom:0;
+    left: 0;
+}
+
+.gallery_button{
+    background-color: white;
+    font-size: 90px;
 }
