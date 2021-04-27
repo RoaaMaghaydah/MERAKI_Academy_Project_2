@@ -1,0 +1,39 @@
+
+body{
+    background-image: url("https://i.redd.it/vdhgv54ndnj21.png");
+
+    background-size:1400px 400px;
+    background-repeat: no-repeat;
+}
+
+.div1{
+display: grid;
+grid-template-columns: 100px 100px 100px;
+gap: 30px;
+justify-content:end;
+justify-items: center;
+font-size: 20px;
+color: white;
+
+};
+
+.perant{
+
+    display: grid;
+    gap: 50px;
+  
+}
+.start{
+    justify-self: center;
+}
+
+.p{
+position: relative;
+top :40px;
+left: 250px;
+ color: rgb(65, 4, 43));
+ font-size: 60px;
+ font-family: 'Times New Roman', Times, serif;
+ font-weight: bold;
+ font-style: italic;
+}
