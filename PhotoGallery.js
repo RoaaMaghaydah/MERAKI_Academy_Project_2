@@ -9,12 +9,16 @@ theme.on("click",()=>{
   });
 
 })
+////////////////////////////////////////////////////////////////////
+const flowers_arr=["https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg","http://www.photon-echoes.com/images/nature/flowers/flower1.JPG",
+"https://empire-s3-production.bobvila.com/slides/26814/original/ganzia.jpg?1532362531","https://sciencenotes.org/wp-content/uploads/2020/02/1280px-Glowing_flowers-1024x710.jpg"];
+
+///////////////////////////////////////////////////////////////////
 
 const gallery=$("<div class:'gallery_button'>  </div>");
 gallery.appendTo(body1);
-
-const all=$('<button class:"button"> All</button>');
-const flowers=$('<button > flowers</button>');
+const all=$('<button "> All</button>');
+const flowers=$('<button id="imgs_2"> flowers</button>');
 const animals=$('<button > animals</button>');
 const greenLand=$('<button> green land</button>');
 all.appendTo(gallery);
@@ -84,3 +88,32 @@ gallery.css({
   greenLand.on("mouseout",function(){
     $(this).removeClass("button")
   })
+
+  const gallery_1=$("<div id='show'>  </div>");
+  gallery_1.appendTo(body1);
+
+  const add_flowers=()=>
+  {
+    $("#show").html("");
+    for(let i=0 ;i<flowers_arr.length;i++)
+    {
+        const add=$(`<img src=${flowers_arr[i]} style="height: 300; width: 300px;">`);
+        add.appendTo(gallery_1)
+      //gallery_1.html(`<img src=${flowers_arr[0]}>`)
+
+    }
+  }
+
+flowers.on('click',add_flowers);
+
+gallery_1.css({
+    "display": "grid",
+    'grid-template-columns': '200px 200px ',
+    'gap': '200px',
+    'justify-content': 'center',
+   
+    /*'height':' 50px',
+    'width': '50px',
+    'position':'relative',
+    'top' :'300px',  */  
+})
