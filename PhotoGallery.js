@@ -174,11 +174,10 @@ gallery.css({
           add.on("mouseout",function(){
             add.removeClass("change")
           })
-          for(let j=0 ;j<emojy.length;j++)
-            {
-              const add_emojy=$(emojy[j]);
-              add_emojy.appendTo(div_3)
-              add_emojy.css({
+          
+              const add_emojy_1=$(emojy[0]);
+              add_emojy_1.appendTo(div_3)
+              add_emojy_1.css({
                 'position':'relative',
                 'top' :'274px', 
                  "margin" :'20px',
@@ -186,20 +185,87 @@ gallery.css({
                  'width': '30px',
                 'border': '2px black ',  
              })
-             add_emojy.on("mouseover",function(){
+             add_emojy_1.on("mouseover",function(){
                 $(this).addClass("change_1")
             })
               
-            add_emojy.on("mouseout",function(){
+            add_emojy_1.on("mouseout",function(){
                 $(this).removeClass("change_1")
             }) 
            
-                add_emojy.on("click",function(){
+                add_emojy_1.on("click",function(){
+
                 flowers_arr.splice(i,1);
                 render_flowers()
+
+             })    
+
+             const add_emojy_2=$(emojy[1]);
+              add_emojy_2.appendTo(div_3)
+              add_emojy_2.css({
+                'position':'relative',
+                'top' :'274px', 
+                 "margin" :'20px',
+                 'height': '30px',
+                 'width': '30px',
+                'border': '2px black ',  
+             })
+             add_emojy_2.on("mouseover",function(){
+                $(this).addClass("change_1")
+            })
+              
+            add_emojy_2.on("mouseout",function(){
+                $(this).removeClass("change_1")
+            }) 
+           
+            add_emojy_2.on("click",function(){                
+             })    
+
+             const add_emojy_3=$(emojy[2]);
+              add_emojy_3.appendTo(div_3)
+              add_emojy_3.css({
+                'position':'relative',
+                'top' :'274px', 
+                 "margin" :'20px',
+                 'height': '30px',
+                 'width': '30px',
+                'border': '2px black ',  
+             })
+             add_emojy_3.on("mouseover",function(){
+                $(this).addClass("change_1")
+            })
+              
+            add_emojy_3.on("mouseout",function(){
+                $(this).removeClass("change_1")
+            }) 
+           
+                add_emojy_3.on("click",function(){
+             })    
+
+             const add_emojy_4=$(emojy[3]);
+              add_emojy_4.appendTo(div_3)
+              add_emojy_4.css({
+                'position':'relative',
+                'top' :'274px', 
+                 "margin" :'20px',
+                 'height': '30px',
+                 'width': '30px',
+                'border': '2px black ',  
+             })
+             add_emojy_4.on("mouseover",function(){
+                $(this).addClass("change_1")
+            })
+              
+            add_emojy_4.on("mouseout",function(){
+                $(this).removeClass("change_1")
+            }) 
+           
+                add_emojy_4.on("click",function(){
+
+                          
              })    
         
-            }
+        
           
             
     }
