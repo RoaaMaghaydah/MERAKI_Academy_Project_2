@@ -27,6 +27,8 @@ const green_arr=["https://lh3.googleusercontent.com/proxy/3T1zW7ui8Z3hrdHZwC9po_
 const emojy=[`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-x" viewBox="0 0 16 16">
 <path d="M6.854 7.146a.5.5 0 1 0-.708.708L7.293 9l-1.147 1.146a.5.5 0 0 0 .708.708L8 9.707l1.146 1.147a.5.5 0 0 0 .708-.708L8.707 9l1.147-1.146a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146z"/>
 <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+</svg>`,`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
+<path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
 </svg>`,`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
 <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
 </svg>`,`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
@@ -166,11 +168,11 @@ gallery.css({
            
          })
            add.on("mouseover",function(){
-            $(this).addClass("change")
+            add.addClass("change")
         })
           
           add.on("mouseout",function(){
-            $(this).removeClass("change")
+            add.removeClass("change")
           })
           for(let i=0 ;i<emojy.length;i++)
           {
@@ -179,12 +181,18 @@ gallery.css({
               add_emojy.css({
                 'position':'relative',
                 'top' :'274px', 
-                 "margin" :'10px',
+                 "margin" :'20px',
                  'height': '30px',
                  'width': '30px',
-                'border-radius': '20px ',
-               
+                'border': '2px black ',  
              })
+             add_emojy.on("mouseover",function(){
+                $(this).addClass("change_1")
+            })
+              
+            add_emojy.on("mouseout",function(){
+                $(this).removeClass("change_1")
+              })
 
           }
     }
@@ -226,8 +234,14 @@ const render_animals=()=>
 
     for(let i=0 ;i<animals_arr.length;i++)
     {
+        const div_1=$('<div></div>')
+        div_1.appendTo(gallery_1)
+        const div_2=$('<div></div>');
+        div_2.appendTo(div_1);
+        const div_3=$('<div></div>');
+        div_3.appendTo(div_1);
         const add=$(`<img src=${animals_arr[i]} style="height: 300px; width: 300px;">`);
-        add.appendTo(gallery_1)
+        add.appendTo(div_2)
         add.css({
             'position':'relative',
             'top' :'270px', 
@@ -239,6 +253,28 @@ const render_animals=()=>
           add.on("mouseout",function(){
             $(this).removeClass("change")
           })
+
+          for(let i=0 ;i<emojy.length;i++)
+          {
+              const add_emojy=$(emojy[i]);
+              add_emojy.appendTo(div_3)
+              add_emojy.css({
+                'position':'relative',
+                'top' :'274px', 
+                 "margin" :'20px',
+                 'height': '30px',
+                 'width': '30px',
+                'border': '2px black ',  
+             })
+             add_emojy.on("mouseover",function(){
+                $(this).addClass("change_1")
+            })
+              
+            add_emojy.on("mouseout",function(){
+                $(this).removeClass("change_1")
+              })
+
+          }
           
     }
    
@@ -278,8 +314,14 @@ const render_greenLand=()=>
 })
     for(let i=0 ;i<green_arr.length;i++)
     {
+        const div_1=$('<div></div>')
+        div_1.appendTo(gallery_1)
+        const div_2=$('<div></div>');
+        div_2.appendTo(div_1);
+        const div_3=$('<div></div>');
+        div_3.appendTo(div_1);
         const add=$(`<img src=${green_arr[i]} style="height: 300px; width: 300px;">`);
-        add.appendTo(gallery_1)
+        add.appendTo(div_2)
         add.css({
             'position':'relative',
             'top' :'270px',  
@@ -292,6 +334,28 @@ const render_greenLand=()=>
             $(this).removeClass("change")
           })
 
+          for(let i=0 ;i<emojy.length;i++)
+          {
+              const add_emojy=$(emojy[i]);
+              add_emojy.appendTo(div_3)
+              add_emojy.css({
+                'position':'relative',
+                'top' :'274px', 
+                 "margin" :'20px',
+                 'height': '30px',
+                 'width': '30px',
+                'border': '2px black ',  
+             })
+             add_emojy.on("mouseover",function(){
+                $(this).addClass("change_1")
+            })
+              
+            add_emojy.on("mouseout",function(){
+                $(this).removeClass("change_1")
+              })
+
+          }
+
     }
    
   }
@@ -303,7 +367,7 @@ const render_all=()=>
     const all_arr=flowers_arr.concat(animals_arr).concat(green_arr);
   $("#show").html("");
   for(let i=0 ;i<all_arr.length;i++)
-  {
+  {  
       const add=$(`<img src=${all_arr[i]} style="height: 300px; width: 300px;">`);
       add.appendTo(gallery_1)
  add.css({

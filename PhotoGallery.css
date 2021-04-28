@@ -76,3 +76,9 @@ left: 50px;
     height:320px !important;
     width: 320px !important;   
 }
+
+.change_1{
+    height:40px !important;
+    width: 40px !important;   
+    border: 2px solid black !important;
+}
