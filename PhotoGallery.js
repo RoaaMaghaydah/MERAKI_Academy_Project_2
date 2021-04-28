@@ -44,7 +44,8 @@ gallery.css({
     "display": "grid",
     'grid-template-columns': '100px 100px 100px 100px',
     'gap': '50px',
-   'justify-content': 'center',
+   'justify-content': 'start',
+   'margin-left':"50px",
    
   });
 
@@ -109,15 +110,26 @@ gallery.css({
   const render_flowers=()=>
   {
     $("#show").html("");
+    const new_button=$('<button> +</button>' )
+    new_button.appendTo(gallery_1)
+    new_button.css({
+        'position':'relative',
+        'top' :'274px', 
+        'font-size':"60px",  
+        'border-radius': '20px',
+        'height': '300px',
+        'width': '300px',
+    })
     for(let i=0 ;i<flowers_arr.length;i++)
     {
-        const add=$(`<img src=${flowers_arr[i]} style="height: 300; width: 300px;">`);
+        const add=$(`<img src=${flowers_arr[i]} style="height: 300px; width: 300px;">`);
         add.appendTo(gallery_1)
         add.css({
             'position':'relative',
-            'top' :'270px',      
-            'border': '3px solid black', 
-           })
+            'top' :'274px',      
+            'border-radius': '20px ',
+           
+         })
            add.on("mouseover",function(){
             $(this).addClass("change")})
           
@@ -126,16 +138,7 @@ gallery.css({
           })
 
     }
-    const new_button=$('<button> +</button>' )
-    new_button.appendTo(gallery_1)
-    new_button.css({
-        'position':'relative',
-        'top' :'290px', 
-        'font-size':"60px",  
-        'border': '3px solid black',   
-        'height': '200px',
-        'width': '200px',
-    })
+   
   }
 
 flowers.on('click',render_flowers);
@@ -143,14 +146,24 @@ flowers.on('click',render_flowers);
 const render_animals=()=>
   {
     $("#show").html("");
+    const new_button=$('<button> +</button>' )
+    new_button.appendTo(gallery_1)
+    new_button.css({
+        'position':'relative',
+        'top' :'274px', 
+        'font-size':"60px",  
+        'border-radius': '20px ',  
+        'height': '300px',
+        'width': '300px',
+    })
     for(let i=0 ;i<animals_arr.length;i++)
     {
-        const add=$(`<img src=${animals_arr[i]} style="height: 300; width: 300px;">`);
+        const add=$(`<img src=${animals_arr[i]} style="height: 300px; width: 300px;">`);
         add.appendTo(gallery_1)
         add.css({
             'position':'relative',
             'top' :'270px', 
-            'border': '3px solid black',      
+            'border-radius': '20px ',     
            })
            add.on("mouseover",function(){
             $(this).addClass("change")})
@@ -158,23 +171,9 @@ const render_animals=()=>
           add.on("mouseout",function(){
             $(this).removeClass("change")
           })
-          add.on("mouseover",function(){
-            $(this).addClass("change")})
           
-          add.on("mouseout",function(){
-            $(this).removeClass("change")
-          })
     }
-    const new_button=$('<button> +</button>' )
-    new_button.appendTo(gallery_1)
-    new_button.css({
-        'position':'relative',
-        'top' :'290px', 
-        'font-size':"60px",  
-        'border': '3px solid black',   
-        'height': '200px',
-        'width': '200px',
-    })
+   
   }
 
 animals.on('click',render_animals);
@@ -183,14 +182,38 @@ animals.on('click',render_animals);
 const render_greenLand=()=>
   {
     $("#show").html("");
+
+    const input=$('<input type="text">')
+    const new_button=$('<button> +</button>' )
+    new_button.appendTo(gallery_1)
+    new_button.css({
+        'position':'relative',
+        'top' :'274px', 
+        'font-size':"60px",  
+        'border-radius': '20px ',   
+        'height': '300px',
+        'width': '300px',
+    })
+  //input.appendTo(gallery_1);
+   new_button.on('click',()=>{ 
+   input.css({
+    'position':'relative',
+    'top' :'300px', 
+    'font-size':"30px",  
+    'border-radius': '20px ',   
+    'height': '300px',
+    'width': '300px',
+   })
+   green_arr.push(input.val());
+})
     for(let i=0 ;i<green_arr.length;i++)
     {
-        const add=$(`<img src=${green_arr[i]} style="height: 300; width: 300px;">`);
+        const add=$(`<img src=${green_arr[i]} style="height: 300px; width: 300px;">`);
         add.appendTo(gallery_1)
         add.css({
             'position':'relative',
             'top' :'270px',  
-            'border': '3px solid black',  
+            'border-radius': '20px ', 
            })
            add.on("mouseover",function(){
             $(this).addClass("change")})
@@ -200,16 +223,7 @@ const render_greenLand=()=>
           })
 
     }
-    const new_button=$('<button> +</button>' )
-    new_button.appendTo(gallery_1)
-    new_button.css({
-        'position':'relative',
-        'top' :'290px', 
-        'font-size':"60px",  
-        'border': '3px solid black',   
-        'height': '200px',
-        'width': '200px',
-    })
+   
   }
 greenLand.on('click',render_greenLand);
 
@@ -218,12 +232,12 @@ const render_all=()=>
     $("#show").html("");
     for(let i=0 ;i<all_arr.length;i++)
     {
-        const add=$(`<img src=${all_arr[i]} style="height: 150; width: 200px;">`);
+        const add=$(`<img src=${all_arr[i]} style="height: 300px; width: 300px;">`);
         add.appendTo(gallery_1)
    add.css({
     'position':'relative',
     'top' :'270px',   
-    'border': '3px solid black',    
+    'border-radius': '20px ',   
    })
    add.on("mouseover",function(){
     $(this).addClass("change")})
@@ -236,14 +250,11 @@ const render_all=()=>
 all.on('click',render_all);
 
 
-
-
 gallery_1.css({
     "display": "grid",
     'grid-template-columns': '300px 300px 300px',
     'gap': '100px',
-    'justify-content': 'center',
-   
+    'justify-content': 'center',  
 })
 
 
