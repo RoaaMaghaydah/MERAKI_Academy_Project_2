@@ -1,13 +1,12 @@
 const body1 =$("body")
 const theme=$('#theme')
+
 theme.on("click",()=>{
  body1.css({
-   "background-image":'url("https://www.ramstarab.com/wp-content/uploads/2019/05/%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA-%D9%85%D8%AA%D9%86%D9%88%D8%B9%D8%A9-%D9%85%D9%84%D9%88%D9%86%D8%A9-10.jpeg")',
-   'background-size':'1400px 400px',
-   'background-repeat': 'no-repea',
-    
+   "background-image":'url("https://www.ramstarab.com/wp-content/uploads/2019/05/%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA-%D9%85%D8%AA%D9%86%D9%88%D8%B9%D8%A9-%D9%85%D9%84%D9%88%D9%86%D8%A9-10.jpeg")!important',
+   'background-size':'1400px 350px',
+   'background-repeat': 'no-repea',  
   });
-
 })
 ////////////////////////////////////////////////////////////////////
 const flowers_arr=["https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg","http://www.photon-echoes.com/images/nature/flowers/flower1.JPG",
