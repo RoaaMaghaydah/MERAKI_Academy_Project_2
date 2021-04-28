@@ -24,7 +24,7 @@ const green_arr=["https://lh3.googleusercontent.com/proxy/3T1zW7ui8Z3hrdHZwC9po_
 "https://pic.i7lm.com/wp-content/uploads/2019/07/%D8%A3%D8%AD%D9%84%D9%8A-%D8%B5%D9%88%D8%B1-%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9-780x405.jpg",
 "https://www.zyadda.com/wp-content/uploads/2021/02/%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-%D8%B9%D9%86-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D8%A9.jpg"]
 
-const all_arr=flowers_arr.concat(animals_arr).concat(green_arr);
+
 
 
 ///////////////////////////////////////////////////////////////////
@@ -108,27 +108,6 @@ gallery.css({
   gallery_1.appendTo(body1);
 
   
-const render_all=()=>
-{
-  $("#show").html("");
-  for(let i=0 ;i<all_arr.length;i++)
-  {
-      const add=$(`<img src=${all_arr[i]} style="height: 300px; width: 300px;">`);
-      add.appendTo(gallery_1)
- add.css({
-  'position':'relative',
-  'top' :'270px',   
-  'border-radius': '20px ',   
- })
- add.on("mouseover",function(){
-  $(this).addClass("change")})
-
-add.on("mouseout",function(){
-  $(this).removeClass("change")
-})
-  }
-}
-all.on('click',render_all);
 
 
   const render_flowers=()=>
@@ -158,7 +137,7 @@ all.on('click',render_all);
         'width': '300px',
     })
    new_button.on('click',()=>{ 
-   flowers.push(input.val()); 
+   flowers_arr.push(input.val()); 
    render_flowers(); 
 
  })
@@ -291,6 +270,28 @@ const render_greenLand=()=>
 greenLand.on('click',render_greenLand);
 
 
+const render_all=()=>
+{
+    const all_arr=flowers_arr.concat(animals_arr).concat(green_arr);
+  $("#show").html("");
+  for(let i=0 ;i<all_arr.length;i++)
+  {
+      const add=$(`<img src=${all_arr[i]} style="height: 300px; width: 300px;">`);
+      add.appendTo(gallery_1)
+ add.css({
+  'position':'relative',
+  'top' :'270px',   
+  'border-radius': '20px ',   
+ })
+ add.on("mouseover",function(){
+  $(this).addClass("change")})
+
+add.on("mouseout",function(){
+  $(this).removeClass("change")
+})
+  }
+}
+all.on('click',render_all);
 
 gallery_1.css({
     "display": "grid",
@@ -299,5 +300,4 @@ gallery_1.css({
     'justify-content': 'start',  
     'margin-left':"50px",
 })
-
 
