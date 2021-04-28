@@ -174,9 +174,9 @@ gallery.css({
           add.on("mouseout",function(){
             add.removeClass("change")
           })
-          for(let i=0 ;i<emojy.length;i++)
-          {
-              const add_emojy=$(emojy[i]);
+          for(let j=0 ;j<emojy.length;j++)
+            {
+              const add_emojy=$(emojy[j]);
               add_emojy.appendTo(div_3)
               add_emojy.css({
                 'position':'relative',
@@ -192,9 +192,16 @@ gallery.css({
               
             add_emojy.on("mouseout",function(){
                 $(this).removeClass("change_1")
-              })
-
-          }
+            }) 
+           
+                add_emojy.on("click",function(){
+                flowers_arr.splice(i,1);
+                render_flowers()
+             })    
+        
+            }
+          
+            
     }
    
   }
