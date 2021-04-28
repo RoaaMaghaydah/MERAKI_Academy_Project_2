@@ -2,7 +2,7 @@
 body{
     background-image: url("https://i.redd.it/vdhgv54ndnj21.png");
 
-    background-size:1400px 400px;
+    background-size:1400px 350px;
     background-repeat: no-repeat;
 
 
@@ -69,7 +69,10 @@ left: 250px;
     position: sticky;
     bottom:0;
     left: 0;
+   
 }
 
-
-
+.change{
+    height:200px;
+    width: 320px;
+}
