@@ -36,7 +36,7 @@ let favorite = [];
 let bool = true;
 
 ///////////////////////////////////////////////////////////////////
-
+const lightbox=$("<div id='lightbox'></div>")
 const gallery = $("<div class:'gallery_button'>  </div>");
 gallery.appendTo(body1);
 gallery.css({
@@ -177,7 +177,25 @@ $("#home").on('click', () => {
             add.on("mouseout", function () {
                 add.removeClass("change")
             })
+        //////////////////////////////////////////////////////////////////////   
+        
+        body1.append(lightbox);
+        
+         add.on('click',e=>{ 
+           lightbox[0].classList.add('active')
+           const img_2=$(`<img src=${flowers_arr[i]} style="height: 300px; width: 300px;"></img>`)
+           while(lightbox.firstChild){
+               lightbox[0].removeChild(lightbox.firstChild)
+             }
+           lightbox.append(img_2)
+        })
+    
+        lightbox.on('click',e=>{
+            if(e.target !==e.currentTarget) return
+            lightbox[0].classList.remove('active')
+        })
 
+         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
             const add_emojy_1 = $(emojy[0]);
             add_emojy_1.appendTo(div_3)
             add_emojy_1.css({

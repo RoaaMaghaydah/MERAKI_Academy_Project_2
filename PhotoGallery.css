@@ -93,3 +93,20 @@ left: 50px;
         background-size: 1400px 350px;
         background-repeat:no-repeat
     }
+
+    /*__________________________________________________________*/
+#lightbox{
+    position:fixed;
+z-index: 1000;
+top:0;
+width: 100%;
+height: 100%;
+background-color:rgba(0, 0, 0,.7) ;
+display: none;
+}
+
+#lightbox.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
