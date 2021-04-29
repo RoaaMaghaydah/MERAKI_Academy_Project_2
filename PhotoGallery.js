@@ -35,12 +35,13 @@ const emojy = [`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" f
 <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
 </svg>`];
 
-const favorite=[1,2];
+let favorite=[];
 
 ///////////////////////////////////////////////////////////////////
 
 const gallery = $("<div class:'gallery_button'>  </div>");
 gallery.appendTo(body1);
+$("#home").on('click',()=>{
 const all = $('<button "> All</button>');
 const flowers = $('<button id="imgs_2"> flowers</button>');
 const animals = $('<button > animals</button>');
@@ -119,7 +120,7 @@ greenLand.on("mouseout", function () {
 })
 
 const gallery_1 = $("<div id='show'>  </div>");
-gallery_1.appendTo(body1);
+gallery_1.appendTo(gallery);
 
 
 
@@ -246,11 +247,11 @@ const render_flowers = () => {
         add_emojy_3.on("click", function () {
             favorite.push(flowers_arr[i]);
             localStorage.setItem("list_data_key", JSON.stringify(favorite));
-            var storedData = localStorage.getItem("list_data_key");
-            alert(favorite);
+         let storedData = localStorage.getItem("list_data_key");
+           // alert(favorite);
             if (storedData) { 
               favorite= JSON.parse(storedData);
-              alert("hhhhh");
+             // alert("hhhhh");
             } 
         })
 
@@ -607,3 +608,8 @@ gallery_1.css({
     'margin-left': "50px",
 })
 
+})
+
+$("#favorit").on('click',()=>{
+    gallery.html("")
+})
