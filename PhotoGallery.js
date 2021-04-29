@@ -36,7 +36,7 @@ let favorite = [];
 let bool = true;
 
 ///////////////////////////////////////////////////////////////////
-const lightbox=$("<div id='lightbox'></div>")
+const lightbox = $("<div id='lightbox'></div>")
 const gallery = $("<div class:'gallery_button'>  </div>");
 gallery.appendTo(body1);
 gallery.css({
@@ -177,25 +177,30 @@ $("#home").on('click', () => {
             add.on("mouseout", function () {
                 add.removeClass("change")
             })
-        //////////////////////////////////////////////////////////////////////   
-        
-        body1.append(lightbox);
-        
-         add.on('click',e=>{ 
-           lightbox[0].classList.add('active')
-           const img_2=$(`<img src=${flowers_arr[i]} style="height: 300px; width: 300px;"></img>`)
-           while(lightbox.firstChild){
-               lightbox[0].removeChild(lightbox.firstChild)
-             }
-           lightbox.append(img_2)
-        })
-    
-        lightbox.on('click',e=>{
-            if(e.target !==e.currentTarget) return
-            lightbox[0].classList.remove('active')
-        })
+            //////////////////////////////////////////////////////////////////////   
 
-         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            body1.append(lightbox);
+
+            add.on('click', e => {
+                lightbox[0].classList.add('active')
+                const img_2 = $(`<img src=${flowers_arr[i]} style="height: 500px; width: 500px;"></img>`)
+                img_2.css({
+                    'background-color':'black' ,
+                   'border':'2px solid white',
+                   })
+   
+                while (lightbox[0].firstChild) {
+                    lightbox[0].removeChild(lightbox[0].firstChild)
+                }
+                lightbox.append(img_2)
+            })
+
+            lightbox.on('click', e => {
+                if (e.target !== e.currentTarget) return
+                lightbox[0].classList.remove('active')
+            })
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
             const add_emojy_1 = $(emojy[0]);
             add_emojy_1.appendTo(div_3)
             add_emojy_1.css({
@@ -262,10 +267,10 @@ $("#home").on('click', () => {
             })
 
             add_emojy_3.on("click", function () {
-                if (favorite.indexOf(flowers_arr[i])===-1) {
-                favorite.push(flowers_arr[i]);
-                localStorage.setItem("list_data_key", JSON.stringify(favorite));
-                add_emojy_3.unbind('click')
+                if (favorite.indexOf(flowers_arr[i]) === -1) {
+                    favorite.push(flowers_arr[i]);
+                    localStorage.setItem("list_data_key", JSON.stringify(favorite));
+                    add_emojy_3.unbind('click')
                 }
             })
 
@@ -348,6 +353,31 @@ $("#home").on('click', () => {
             add.on("mouseout", function () {
                 $(this).removeClass("change")
             })
+            /////////////////////////////////////////////////////////
+            body1.append(lightbox);
+
+            add.on('click', e => {
+                lightbox[0].classList.add('active')
+                const img_2 = $(`<img src=${animals_arr[i]} style="height: 500px; width: 500px;"></img>`)
+                img_2.css({
+                 'background-color':'black' ,
+                'border':'2px solid white',
+                })
+
+                while (lightbox[0].firstChild) {
+                    lightbox[0].removeChild(lightbox[0].firstChild)
+                }
+                lightbox.append(img_2)
+            })
+
+            lightbox.on('click', e => {
+                if (e.target !== e.currentTarget) return
+                lightbox[0].classList.remove('active')
+            })
+
+
+            ////////////////////////////////////////////////////////
+
 
             const add_emojy_1 = $(emojy[0]);
             add_emojy_1.appendTo(div_3)
@@ -414,15 +444,15 @@ $("#home").on('click', () => {
             })
 
             add_emojy_3.on("click", function () {
-               
-                  
-                        if (favorite.indexOf(animals_arr[i])===-1) { 
-                            favorite.push(animals_arr[i]);
-                            localStorage.setItem("list_data_key", JSON.stringify(favorite));
-                            add_emojy_3.unbind('click')
-                        
-                        }
-                
+
+
+                if (favorite.indexOf(animals_arr[i]) === -1) {
+                    favorite.push(animals_arr[i]);
+                    localStorage.setItem("list_data_key", JSON.stringify(favorite));
+                    add_emojy_3.unbind('click')
+
+                }
+
 
             })
 
@@ -507,6 +537,32 @@ $("#home").on('click', () => {
                 $(this).removeClass("change")
             })
 
+            //////////////////////////////////////////////
+
+            body1.append(lightbox);
+
+            add.on('click', e => {
+                lightbox[0].classList.add('active')
+                const img_2 = $(`<img src=${green_arr[i]} style="height: 500px; width: 500px;"></img>`)
+                img_2.css({
+                    'background-color':'black' ,
+                   'border':'2px solid white',
+                   })
+   
+                while (lightbox[0].firstChild) {
+                    lightbox[0].removeChild(lightbox[0].firstChild)
+                }
+                lightbox.append(img_2)
+            })
+
+            lightbox.on('click', e => {
+                if (e.target !== e.currentTarget) return
+                lightbox[0].classList.remove('active')
+            })
+
+
+            //////////////////////////////////////////////
+
             const add_emojy_1 = $(emojy[0]);
             add_emojy_1.appendTo(div_3)
             add_emojy_1.css({
@@ -572,10 +628,10 @@ $("#home").on('click', () => {
             })
 
             add_emojy_3.on("click", function () {
-                if (favorite.indexOf(green_arr[i])===-1) {
-                favorite.push(green_arr[i]);
-                localStorage.setItem("list_data_key", JSON.stringify(favorite));
-                add_emojy_3.unbind('click')
+                if (favorite.indexOf(green_arr[i]) === -1) {
+                    favorite.push(green_arr[i]);
+                    localStorage.setItem("list_data_key", JSON.stringify(favorite));
+                    add_emojy_3.unbind('click')
                 }
             })
 
