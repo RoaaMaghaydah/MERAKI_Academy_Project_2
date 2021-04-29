@@ -41,24 +41,24 @@ let favorite=[];
 
 const gallery = $("<div class:'gallery_button'>  </div>");
 gallery.appendTo(body1);
-$("#home").on('click',()=>{
-const all = $('<button "> All</button>');
-const flowers = $('<button id="imgs_2"> flowers</button>');
-const animals = $('<button > animals</button>');
-const greenLand = $('<button> nature</button>');
-all.appendTo(gallery);
-flowers.appendTo(gallery);
-animals.appendTo(gallery);
-greenLand.appendTo(gallery);
-
 gallery.css({
     "display": "grid",
     'grid-template-columns': '100px 100px 100px 100px',
     'gap': '50px',
     'justify-content': 'start',
     'margin-left': "50px",
-
 });
+
+$("#home").on('click',()=>{
+    gallery.html("");
+const flowers = $('<button id="imgs_2"> flowers</button>');
+const all = $('<button "> All</button>');
+const animals = $('<button > animals</button>');
+const greenLand = $('<button> nature</button>');
+all.appendTo(gallery);
+flowers.appendTo(gallery);
+animals.appendTo(gallery);
+greenLand.appendTo(gallery);
 
 all.css({
     'position': 'relative',
@@ -235,6 +235,7 @@ const render_flowers = () => {
             'height': '30px',
             'width': '30px',
             'border': '2px black ',
+            'cursor': 'block'
         })
         add_emojy_3.on("mouseover", function () {
             $(this).addClass("change_1")
@@ -247,12 +248,7 @@ const render_flowers = () => {
         add_emojy_3.on("click", function () {
             favorite.push(flowers_arr[i]);
             localStorage.setItem("list_data_key", JSON.stringify(favorite));
-         let storedData = localStorage.getItem("list_data_key");
-           // alert(favorite);
-            if (storedData) { 
-              favorite= JSON.parse(storedData);
-             // alert("hhhhh");
-            } 
+         
         })
 
         const add_emojy_4 = $(emojy[3]);
@@ -607,9 +603,39 @@ gallery_1.css({
     'justify-content': 'start',
     'margin-left': "50px",
 })
-
 })
 
-$("#favorit").on('click',()=>{
-    gallery.html("")
-})
+   $("#favorit").on('click',()=>{
+    gallery.html("");
+    let storedData = localStorage.getItem("list_data_key");
+      console.log("1",storedData,"2",favorite)
+
+        const div_11 = $('<div id="f"></div>')
+          div_11.appendTo(gallery)
+
+         div_11.css({
+            "display": "grid",
+            'grid-template-columns': '300px 300px 300px',
+            'gap': '100px',
+            'justify-content': 'start',
+            'margin-left': "50px",
+        })
+
+            for (let i = 0; i < favorite.length; i++) {
+                const add = $(`<img src=${favorite[i]} style="height: 300px; width: 300px;">`);
+                add.appendTo(div_11)
+                add.css({
+                    'position': 'relative',
+                    'top': '270px',
+                    'border-radius': '20px ',
+                })
+                add.on("mouseover", function () {
+                    $(this).addClass("change")
+                })
+        
+                add.on("mouseout", function () {
+                    $(this).removeClass("change")
+                })
+            }
+
+        })
