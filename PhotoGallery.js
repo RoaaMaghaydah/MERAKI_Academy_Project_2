@@ -134,20 +134,20 @@ const render_flowers = () => {
     input.appendTo(div_0);
     input.css({
         'position': 'relative',
-        'top': '274px',
+        'top': '220px',
         'font-size': "15px",
         'border-radius': '20px ',
-        'height': '220px',
+        'height': '230px',
         'width': '300px',
     })
     const new_button = $('<button> +</button>')
     new_button.appendTo(div_0)
     new_button.css({
         'position': 'relative',
-        'top': '274px',
+        'top': '220px',
         'font-size': "60px",
         'border-radius': '20px ',
-        'height': '80px',
+        'height': '75px',
         'width': '300px',
     })
     new_button.on('click', () => {
@@ -168,7 +168,7 @@ const render_flowers = () => {
         add.appendTo(div_2)
         add.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             'border-radius': '20px ',
 
         })
@@ -184,7 +184,7 @@ const render_flowers = () => {
         add_emojy_1.appendTo(div_3)
         add_emojy_1.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             "margin": '20px',
             'height': '30px',
             'width': '30px',
@@ -209,7 +209,7 @@ const render_flowers = () => {
         add_emojy_2.appendTo(div_3)
         add_emojy_2.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             "margin": '20px',
             'height': '30px',
             'width': '30px',
@@ -230,7 +230,7 @@ const render_flowers = () => {
         add_emojy_3.appendTo(div_3)
         add_emojy_3.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             "margin": '20px',
             'height': '30px',
             'width': '30px',
@@ -257,7 +257,7 @@ const render_flowers = () => {
         add_emojy_4.appendTo(div_3)
         add_emojy_4.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             "margin": '20px',
             'height': '30px',
             'width': '30px',
@@ -290,20 +290,20 @@ const render_animals = () => {
     input.appendTo(div);
     input.css({
         'position': 'relative',
-        'top': '274px',
+        'top': '220px',
         'font-size': "15px",
         'border-radius': '20px ',
-        'height': '220px',
+        'height': '230px',
         'width': '300px',
     })
     const new_button = $('<button> +</button>')
     new_button.appendTo(div)
     new_button.css({
         'position': 'relative',
-        'top': '274px',
+        'top': '220px',
         'font-size': "60px",
         'border-radius': '20px ',
-        'height': '80px',
+        'height': '75px',
         'width': '300px',
     })
     new_button.on('click', () => {
@@ -322,7 +322,7 @@ const render_animals = () => {
         add.appendTo(div_2)
         add.css({
             'position': 'relative',
-            'top': '270px',
+            'top': '220px',
             'border-radius': '20px ',
         })
         add.on("mouseover", function () {
@@ -337,7 +337,7 @@ const render_animals = () => {
         add_emojy_1.appendTo(div_3)
         add_emojy_1.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             "margin": '20px',
             'height': '30px',
             'width': '30px',
@@ -362,7 +362,7 @@ const render_animals = () => {
         add_emojy_2.appendTo(div_3)
         add_emojy_2.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             "margin": '20px',
             'height': '30px',
             'width': '30px',
@@ -383,7 +383,7 @@ const render_animals = () => {
         add_emojy_3.appendTo(div_3)
         add_emojy_3.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             "margin": '20px',
             'height': '30px',
             'width': '30px',
@@ -408,7 +408,7 @@ const render_animals = () => {
         add_emojy_4.appendTo(div_3)
         add_emojy_4.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             "margin": '20px',
             'height': '30px',
             'width': '30px',
@@ -442,20 +442,20 @@ const render_greenLand = () => {
     input.appendTo(div);
     input.css({
         'position': 'relative',
-        'top': '274px',
+        'top': '220px',
         'font-size': "15px",
         'border-radius': '20px ',
-        'height': '220px',
+        'height': '230px',
         'width': '300px',
     })
     const new_button = $('<button> +</button>')
     new_button.appendTo(div)
     new_button.css({
         'position': 'relative',
-        'top': '274px',
+        'top': '220px',
         'font-size': "60px",
         'border-radius': '20px ',
-        'height': '80px',
+        'height': '75px',
         'width': '300px',
     })
     new_button.on('click', () => {
@@ -473,7 +473,7 @@ const render_greenLand = () => {
         add.appendTo(div_2)
         add.css({
             'position': 'relative',
-            'top': '270px',
+            'top': '220px',
             'border-radius': '20px ',
         })
         add.on("mouseover", function () {
@@ -488,7 +488,7 @@ const render_greenLand = () => {
         add_emojy_1.appendTo(div_3)
         add_emojy_1.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             "margin": '20px',
             'height': '30px',
             'width': '30px',
@@ -513,7 +513,7 @@ const render_greenLand = () => {
         add_emojy_2.appendTo(div_3)
         add_emojy_2.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             "margin": '20px',
             'height': '30px',
             'width': '30px',
@@ -534,7 +534,7 @@ const render_greenLand = () => {
         add_emojy_3.appendTo(div_3)
         add_emojy_3.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             "margin": '20px',
             'height': '30px',
             'width': '30px',
@@ -559,7 +559,7 @@ const render_greenLand = () => {
         add_emojy_4.appendTo(div_3)
         add_emojy_4.css({
             'position': 'relative',
-            'top': '274px',
+            'top': '220px',
             "margin": '20px',
             'height': '30px',
             'width': '30px',
@@ -592,7 +592,7 @@ const render_all = () => {
         add.appendTo(gallery_1)
         add.css({
             'position': 'relative',
-            'top': '270px',
+            'top': '220px',
             'border-radius': '20px ',
         })
         add.on("mouseover", function () {
@@ -640,7 +640,7 @@ gallery_1.css({
                 add.appendTo(div_11)
                 add.css({
                     'position': 'relative',
-                    'top': '270px',
+                    'top': '220px',
                     'border-radius': '20px ',
                 })
                 add.on("mouseover", function () {
