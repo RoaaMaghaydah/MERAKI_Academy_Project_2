@@ -2,11 +2,8 @@ const body1 = $("body")
 const theme = $('#theme')
 
 theme.on("click", () => {
-    body1.css({
-        "background-image": 'url("https://www.ramstarab.com/wp-content/uploads/2019/05/%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA-%D9%85%D8%AA%D9%86%D9%88%D8%B9%D8%A9-%D9%85%D9%84%D9%88%D9%86%D8%A9-10.jpeg")!important',
-        'background-size': '1400px 350px',
-        'background-repeat': 'no-repea',
-    });
+
+    $t(his).addClass(change_backg);
 })
 ////////////////////////////////////////////////////////////////////
 const flowers_arr = ["https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg", "http://www.photon-echoes.com/images/nature/flowers/flower1.JPG",
@@ -35,7 +32,8 @@ const emojy = [`<svg id="img1" xmlns="http://www.w3.org/2000/svg" width="16" hei
 <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
 </svg>`];
 
-let favorite=[];
+let favorite = [];
+let bool = true;
 
 ///////////////////////////////////////////////////////////////////
 
@@ -49,607 +47,615 @@ gallery.css({
     'margin-left': "50px",
 });
 
-$("#home").on('click',()=>{
+$("#home").on('click', () => {
     gallery.html("");
-const flowers = $('<button id="imgs_2"> flowers</button>');
-const all = $('<button "> All</button>');
-const animals = $('<button > animals</button>');
-const greenLand = $('<button> nature</button>');
-all.appendTo(gallery);
-flowers.appendTo(gallery);
-animals.appendTo(gallery);
-greenLand.appendTo(gallery);
+    const flowers = $('<button id="imgs_2"> flowers</button>');
+    const all = $('<button "> All</button>');
+    const animals = $('<button > animals</button>');
+    const greenLand = $('<button> nature</button>');
+    all.appendTo(gallery);
+    flowers.appendTo(gallery);
+    animals.appendTo(gallery);
+    greenLand.appendTo(gallery);
 
-all.css({
-    'position': 'relative',
-    'top': '200px',
-    'background-color': 'white',
-    'border-radius': '20px'
-});
-
-flowers.css({
-    'position': 'relative',
-    'top': '200px',
-    'background-color': 'white',
-    'border-radius': '20px'
-});
-animals.css({
-    'position': 'relative',
-    'top': '200px',
-    'background-color': 'white',
-    'border-radius': '20px'
-});
-greenLand.css({
-    'position': 'relative',
-    'top': '200px',
-    'background-color': 'white',
-    'border-radius': '20px'
-});
-
-
-all.on("mouseover", function () {
-    $(this).addClass("button")
-})
-
-all.on("mouseout", function () {
-    $(this).removeClass("button")
-})
-
-flowers.on("mouseover", function () {
-    $(this).addClass("button")
-})
-
-flowers.on("mouseout", function () {
-    $(this).removeClass("button")
-})
-
-animals.on("mouseover", function () {
-    $(this).addClass("button")
-})
-
-animals.on("mouseout", function () {
-    $(this).removeClass("button")
-})
-
-greenLand.on("mouseover", function () {
-    $(this).addClass("button")
-})
-
-greenLand.on("mouseout", function () {
-    $(this).removeClass("button")
-})
-
-const gallery_1 = $("<div id='show'>  </div>");
-gallery_1.appendTo(gallery);
-
-
-
-
-const render_flowers = () => {
-    $("#show").html("");
-
-    const div_0 = $('<div id="div_0"></div>')
-    div_0.appendTo(gallery_1)
-    const input = $('<input type="text">')
-    input.appendTo(div_0);
-    input.css({
+    all.css({
         'position': 'relative',
-        'top': '220px',
-        'font-size': "15px",
-        'border-radius': '20px ',
-        'height': '230px',
-        'width': '300px',
-    })
-    const new_button = $('<button> +</button>')
-    new_button.appendTo(div_0)
-    new_button.css({
+        'top': '200px',
+        'background-color': 'white',
+        'border-radius': '20px'
+    });
+
+    flowers.css({
         'position': 'relative',
-        'top': '220px',
-        'font-size': "60px",
-        'border-radius': '20px ',
-        'height': '75px',
-        'width': '300px',
+        'top': '200px',
+        'background-color': 'white',
+        'border-radius': '20px'
+    });
+    animals.css({
+        'position': 'relative',
+        'top': '200px',
+        'background-color': 'white',
+        'border-radius': '20px'
+    });
+    greenLand.css({
+        'position': 'relative',
+        'top': '200px',
+        'background-color': 'white',
+        'border-radius': '20px'
+    });
+
+
+    all.on("mouseover", function () {
+        $(this).addClass("button")
     })
-    new_button.on('click', () => {
-        flowers_arr.push(input.val());
-        render_flowers();
 
+    all.on("mouseout", function () {
+        $(this).removeClass("button")
     })
 
-    for (let i = 0; i < flowers_arr.length; i++) {
-        const div_1 = $('<div></div>')
-        div_1.appendTo(gallery_1)
-        const div_2 = $('<div></div>');
-        div_2.appendTo(div_1);
-        const div_3 = $('<div></div>');
-        div_3.appendTo(div_1);
+    flowers.on("mouseover", function () {
+        $(this).addClass("button")
+    })
 
-        const add = $(`<img src=${flowers_arr[i]} style="height: 300px; width: 300px;">`);
-        add.appendTo(div_2)
-        add.css({
+    flowers.on("mouseout", function () {
+        $(this).removeClass("button")
+    })
+
+    animals.on("mouseover", function () {
+        $(this).addClass("button")
+    })
+
+    animals.on("mouseout", function () {
+        $(this).removeClass("button")
+    })
+
+    greenLand.on("mouseover", function () {
+        $(this).addClass("button")
+    })
+
+    greenLand.on("mouseout", function () {
+        $(this).removeClass("button")
+    })
+
+    const gallery_1 = $("<div id='show'>  </div>");
+    gallery_1.appendTo(gallery);
+
+
+
+
+    const render_flowers = () => {
+        $("#show").html("");
+
+        const div_0 = $('<div id="div_0"></div>')
+        div_0.appendTo(gallery_1)
+        const input = $('<input type="text">')
+        input.appendTo(div_0);
+        input.css({
             'position': 'relative',
             'top': '220px',
+            'font-size': "15px",
             'border-radius': '20px ',
-
+            'height': '230px',
+            'width': '300px',
         })
-        add.on("mouseover", function () {
-            add.addClass("change")
-        })
-
-        add.on("mouseout", function () {
-            add.removeClass("change")
-        })
-
-        const add_emojy_1 = $(emojy[0]);
-        add_emojy_1.appendTo(div_3)
-        add_emojy_1.css({
+        const new_button = $('<button> +</button>')
+        new_button.appendTo(div_0)
+        new_button.css({
             'position': 'relative',
             'top': '220px',
-            "margin": '20px',
-            'height': '30px',
-            'width': '30px',
-            'border': '2px black ',
-        })
-        add_emojy_1.on("mouseover", function () {
-            $(this).addClass("change_1")
-        })
-
-        add_emojy_1.on("mouseout", function () {
-            $(this).removeClass("change_1")
-        })
-
-        add_emojy_1.on("click", function () {
-
-            flowers_arr.splice(i, 1);
-            render_flowers()
-
-        })
-
-        const add_emojy_2 = $(emojy[1]);
-        add_emojy_2.appendTo(div_3)
-        add_emojy_2.css({
-            'position': 'relative',
-            'top': '220px',
-            "margin": '20px',
-            'height': '30px',
-            'width': '30px',
-            'border': '2px black ',
-        })
-        add_emojy_2.on("mouseover", function () {
-            $(this).addClass("change_1")
-        })
-
-        add_emojy_2.on("mouseout", function () {
-            $(this).removeClass("change_1")
-        })
-
-        add_emojy_2.on("click", function () {
-        })
-
-        const add_emojy_3 = $(emojy[2]);
-        add_emojy_3.appendTo(div_3)
-        add_emojy_3.css({
-            'position': 'relative',
-            'top': '220px',
-            "margin": '20px',
-            'height': '30px',
-            'width': '30px',
-            'border': '2px black ',
-            //'cursor': 'block',
-        })
-        add_emojy_3.on("mouseover", function () {
-            $(this).addClass("change_1")
-        })
-
-        add_emojy_3.on("mouseout", function () {
-            $(this).removeClass("change_1")
-        })
-
-        add_emojy_3.on("click", function () {
-            favorite.push(flowers_arr[i]);
-            localStorage.setItem("list_data_key", JSON.stringify(favorite));
-           // add_emojy_3.attr("disabled", "disabled")
-           add_emojy_3.unbind('click')
-
-        })
-
-        const add_emojy_4 = $(emojy[3]);
-        add_emojy_4.appendTo(div_3)
-        add_emojy_4.css({
-            'position': 'relative',
-            'top': '220px',
-            "margin": '20px',
-            'height': '30px',
-            'width': '30px',
-            'border': '2px black ',
-        })
-        add_emojy_4.on("mouseover", function () {
-            $(this).addClass("change_1")
-        })
-
-        add_emojy_4.on("mouseout", function () {
-            $(this).removeClass("change_1")
-        })
-
-        add_emojy_4.on("click", function () {
-
-
-        })
-    }
-
-}
-
-flowers.on('click', render_flowers);
-
-const render_animals = () => {
-    $("#show").html("");
-
-    const div = $('<div id="div_0"></div>')
-    div.appendTo(gallery_1)
-    const input = $('<input type="text">')
-    input.appendTo(div);
-    input.css({
-        'position': 'relative',
-        'top': '220px',
-        'font-size': "15px",
-        'border-radius': '20px ',
-        'height': '230px',
-        'width': '300px',
-    })
-    const new_button = $('<button> +</button>')
-    new_button.appendTo(div)
-    new_button.css({
-        'position': 'relative',
-        'top': '220px',
-        'font-size': "60px",
-        'border-radius': '20px ',
-        'height': '75px',
-        'width': '300px',
-    })
-    new_button.on('click', () => {
-        animals_arr.push(input.val());
-        render_animals();
-    })
-
-    for (let i = 0; i < animals_arr.length; i++) {
-        const div_1 = $('<div></div>')
-        div_1.appendTo(gallery_1)
-        const div_2 = $('<div></div>');
-        div_2.appendTo(div_1);
-        const div_3 = $('<div></div>');
-        div_3.appendTo(div_1);
-        const add = $(`<img src=${animals_arr[i]} style="height: 300px; width: 300px;">`);
-        add.appendTo(div_2)
-        add.css({
-            'position': 'relative',
-            'top': '220px',
+            'font-size': "60px",
             'border-radius': '20px ',
+            'height': '75px',
+            'width': '300px',
         })
-        add.on("mouseover", function () {
-            $(this).addClass("change")
-        })
-
-        add.on("mouseout", function () {
-            $(this).removeClass("change")
-        })
-
-        const add_emojy_1 = $(emojy[0]);
-        add_emojy_1.appendTo(div_3)
-        add_emojy_1.css({
-            'position': 'relative',
-            'top': '220px',
-            "margin": '20px',
-            'height': '30px',
-            'width': '30px',
-            'border': '2px black ',
-        })
-        add_emojy_1.on("mouseover", function () {
-            $(this).addClass("change_1")
-        })
-
-        add_emojy_1.on("mouseout", function () {
-            $(this).removeClass("change_1")
-        })
-
-        add_emojy_1.on("click", function () {
-
-            animals_arr.splice(i, 1);
-            render_animals()
+        new_button.on('click', () => {
+            flowers_arr.push(input.val());
+            render_flowers();
 
         })
 
-        const add_emojy_2 = $(emojy[1]);
-        add_emojy_2.appendTo(div_3)
-        add_emojy_2.css({
-            'position': 'relative',
-            'top': '220px',
-            "margin": '20px',
-            'height': '30px',
-            'width': '30px',
-            'border': '2px black ',
-        })
-        add_emojy_2.on("mouseover", function () {
-            $(this).addClass("change_1")
-        })
+        for (let i = 0; i < flowers_arr.length; i++) {
+            const div_1 = $('<div></div>')
+            div_1.appendTo(gallery_1)
+            const div_2 = $('<div></div>');
+            div_2.appendTo(div_1);
+            const div_3 = $('<div></div>');
+            div_3.appendTo(div_1);
 
-        add_emojy_2.on("mouseout", function () {
-            $(this).removeClass("change_1")
-        })
+            const add = $(`<img src=${flowers_arr[i]} style="height: 300px; width: 300px;">`);
+            add.appendTo(div_2)
+            add.css({
+                'position': 'relative',
+                'top': '220px',
+                'border-radius': '20px ',
 
-        add_emojy_2.on("click", function () {
-        })
+            })
+            add.on("mouseover", function () {
+                add.addClass("change")
+            })
 
-        const add_emojy_3 = $(emojy[2]);
-        add_emojy_3.appendTo(div_3)
-        add_emojy_3.css({
-            'position': 'relative',
-            'top': '220px',
-            "margin": '20px',
-            'height': '30px',
-            'width': '30px',
-            'border': '2px black ',
-        })
-        add_emojy_3.on("mouseover", function () {
-            $(this).addClass("change_1")
-        })
+            add.on("mouseout", function () {
+                add.removeClass("change")
+            })
 
-        add_emojy_3.on("mouseout", function () {
-            $(this).removeClass("change_1")
-        })
+            const add_emojy_1 = $(emojy[0]);
+            add_emojy_1.appendTo(div_3)
+            add_emojy_1.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border': '2px black ',
+            })
+            add_emojy_1.on("mouseover", function () {
+                $(this).addClass("change_1")
+            })
 
-        add_emojy_3.on("click", function () {
-            favorite.push(animals_arr[i]);
-            localStorage.setItem("list_data_key", JSON.stringify(favorite));
-            add_emojy_3.unbind('click')
-        })
-        
+            add_emojy_1.on("mouseout", function () {
+                $(this).removeClass("change_1")
+            })
 
-        const add_emojy_4 = $(emojy[3]);
-        add_emojy_4.appendTo(div_3)
-        add_emojy_4.css({
-            'position': 'relative',
-            'top': '220px',
-            "margin": '20px',
-            'height': '30px',
-            'width': '30px',
-            'border': '2px black ',
-        })
-        add_emojy_4.on("mouseover", function () {
-            $(this).addClass("change_1")
-        })
+            add_emojy_1.on("click", function () {
 
-        add_emojy_4.on("mouseout", function () {
-            $(this).removeClass("change_1")
-        })
+                flowers_arr.splice(i, 1);
+                render_flowers()
 
-        add_emojy_4.on("click", function () {
+            })
+
+            const add_emojy_2 = $(emojy[1]);
+            add_emojy_2.appendTo(div_3)
+            add_emojy_2.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border': '2px black ',
+            })
+            add_emojy_2.on("mouseover", function () {
+                $(this).addClass("change_1")
+            })
+
+            add_emojy_2.on("mouseout", function () {
+                $(this).removeClass("change_1")
+            })
+
+            add_emojy_2.on("click", function () {
+            })
+
+            const add_emojy_3 = $(emojy[2]);
+            add_emojy_3.appendTo(div_3)
+            add_emojy_3.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border': '2px black ',
+                //'cursor': 'block',
+            })
+            add_emojy_3.on("mouseover", function () {
+                $(this).addClass("change_1")
+            })
+
+            add_emojy_3.on("mouseout", function () {
+                $(this).removeClass("change_1")
+            })
+
+            add_emojy_3.on("click", function () {
+                if (favorite.indexOf(flowers_arr[i])===-1) {
+                favorite.push(flowers_arr[i]);
+                localStorage.setItem("list_data_key", JSON.stringify(favorite));
+                add_emojy_3.unbind('click')
+                }
+            })
+
+            const add_emojy_4 = $(emojy[3]);
+            add_emojy_4.appendTo(div_3)
+            add_emojy_4.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border': '2px black ',
+            })
+            add_emojy_4.on("mouseover", function () {
+                $(this).addClass("change_1")
+            })
+
+            add_emojy_4.on("mouseout", function () {
+                $(this).removeClass("change_1")
+            })
+
+            add_emojy_4.on("click", function () {
 
 
-        })
+            })
+        }
 
     }
 
-}
+    flowers.on('click', render_flowers);
 
-animals.on('click', render_animals);
+    const render_animals = () => {
+        $("#show").html("");
 
-
-const render_greenLand = () => {
-    $("#show").html("");
-    const div = $('<div id="div_0"></div>')
-    div.appendTo(gallery_1)
-    const input = $('<input type="text">')
-    input.appendTo(div);
-    input.css({
-        'position': 'relative',
-        'top': '220px',
-        'font-size': "15px",
-        'border-radius': '20px ',
-        'height': '230px',
-        'width': '300px',
-    })
-    const new_button = $('<button> +</button>')
-    new_button.appendTo(div)
-    new_button.css({
-        'position': 'relative',
-        'top': '220px',
-        'font-size': "60px",
-        'border-radius': '20px ',
-        'height': '75px',
-        'width': '300px',
-    })
-    new_button.on('click', () => {
-        green_arr.push(input.val());
-        render_greenLand();
-    })
-    for (let i = 0; i < green_arr.length; i++) {
-        const div_1 = $('<div></div>')
-        div_1.appendTo(gallery_1)
-        const div_2 = $('<div></div>');
-        div_2.appendTo(div_1);
-        const div_3 = $('<div></div>');
-        div_3.appendTo(div_1);
-        const add = $(`<img src=${green_arr[i]} style="height: 300px; width: 300px;">`);
-        add.appendTo(div_2)
-        add.css({
+        const div = $('<div id="div_0"></div>')
+        div.appendTo(gallery_1)
+        const input = $('<input type="text">')
+        input.appendTo(div);
+        input.css({
             'position': 'relative',
             'top': '220px',
+            'font-size': "15px",
             'border-radius': '20px ',
+            'height': '230px',
+            'width': '300px',
         })
-        add.on("mouseover", function () {
-            $(this).addClass("change")
-        })
-
-        add.on("mouseout", function () {
-            $(this).removeClass("change")
-        })
-
-        const add_emojy_1 = $(emojy[0]);
-        add_emojy_1.appendTo(div_3)
-        add_emojy_1.css({
+        const new_button = $('<button> +</button>')
+        new_button.appendTo(div)
+        new_button.css({
             'position': 'relative',
             'top': '220px',
-            "margin": '20px',
-            'height': '30px',
-            'width': '30px',
-            'border': '2px black ',
+            'font-size': "60px",
+            'border-radius': '20px ',
+            'height': '75px',
+            'width': '300px',
         })
-        add_emojy_1.on("mouseover", function () {
-            $(this).addClass("change_1")
-        })
-
-        add_emojy_1.on("mouseout", function () {
-            $(this).removeClass("change_1")
+        new_button.on('click', () => {
+            animals_arr.push(input.val());
+            render_animals();
         })
 
-        add_emojy_1.on("click", function () {
+        for (let i = 0; i < animals_arr.length; i++) {
+            const div_1 = $('<div></div>')
+            div_1.appendTo(gallery_1)
+            const div_2 = $('<div></div>');
+            div_2.appendTo(div_1);
+            const div_3 = $('<div></div>');
+            div_3.appendTo(div_1);
+            const add = $(`<img src=${animals_arr[i]} style="height: 300px; width: 300px;">`);
+            add.appendTo(div_2)
+            add.css({
+                'position': 'relative',
+                'top': '220px',
+                'border-radius': '20px ',
+            })
+            add.on("mouseover", function () {
+                $(this).addClass("change")
+            })
 
-            green_arr.splice(i, 1);
+            add.on("mouseout", function () {
+                $(this).removeClass("change")
+            })
+
+            const add_emojy_1 = $(emojy[0]);
+            add_emojy_1.appendTo(div_3)
+            add_emojy_1.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border': '2px black ',
+            })
+            add_emojy_1.on("mouseover", function () {
+                $(this).addClass("change_1")
+            })
+
+            add_emojy_1.on("mouseout", function () {
+                $(this).removeClass("change_1")
+            })
+
+            add_emojy_1.on("click", function () {
+
+                animals_arr.splice(i, 1);
+                render_animals()
+
+            })
+
+            const add_emojy_2 = $(emojy[1]);
+            add_emojy_2.appendTo(div_3)
+            add_emojy_2.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border': '2px black ',
+            })
+            add_emojy_2.on("mouseover", function () {
+                $(this).addClass("change_1")
+            })
+
+            add_emojy_2.on("mouseout", function () {
+                $(this).removeClass("change_1")
+            })
+
+            add_emojy_2.on("click", function () {
+            })
+
+            const add_emojy_3 = $(emojy[2]);
+            add_emojy_3.appendTo(div_3)
+            add_emojy_3.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border': '2px black ',
+            })
+            add_emojy_3.on("mouseover", function () {
+                $(this).addClass("change_1")
+            })
+
+            add_emojy_3.on("mouseout", function () {
+                $(this).removeClass("change_1")
+            })
+
+            add_emojy_3.on("click", function () {
+               
+                  
+                        if (favorite.indexOf(animals_arr[i])===-1) { 
+                            favorite.push(animals_arr[i]);
+                            localStorage.setItem("list_data_key", JSON.stringify(favorite));
+                            add_emojy_3.unbind('click')
+                        
+                        }
+                
+
+            })
+
+
+            const add_emojy_4 = $(emojy[3]);
+            add_emojy_4.appendTo(div_3)
+            add_emojy_4.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border': '2px black ',
+            })
+            add_emojy_4.on("mouseover", function () {
+                $(this).addClass("change_1")
+            })
+
+            add_emojy_4.on("mouseout", function () {
+                $(this).removeClass("change_1")
+            })
+
+            add_emojy_4.on("click", function () {
+
+
+            })
+
+        }
+
+    }
+
+    animals.on('click', render_animals);
+
+
+    const render_greenLand = () => {
+        $("#show").html("");
+        const div = $('<div id="div_0"></div>')
+        div.appendTo(gallery_1)
+        const input = $('<input type="text">')
+        input.appendTo(div);
+        input.css({
+            'position': 'relative',
+            'top': '220px',
+            'font-size': "15px",
+            'border-radius': '20px ',
+            'height': '230px',
+            'width': '300px',
+        })
+        const new_button = $('<button> +</button>')
+        new_button.appendTo(div)
+        new_button.css({
+            'position': 'relative',
+            'top': '220px',
+            'font-size': "60px",
+            'border-radius': '20px ',
+            'height': '75px',
+            'width': '300px',
+        })
+        new_button.on('click', () => {
+            green_arr.push(input.val());
             render_greenLand();
-
         })
+        for (let i = 0; i < green_arr.length; i++) {
+            const div_1 = $('<div></div>')
+            div_1.appendTo(gallery_1)
+            const div_2 = $('<div></div>');
+            div_2.appendTo(div_1);
+            const div_3 = $('<div></div>');
+            div_3.appendTo(div_1);
+            const add = $(`<img src=${green_arr[i]} style="height: 300px; width: 300px;">`);
+            add.appendTo(div_2)
+            add.css({
+                'position': 'relative',
+                'top': '220px',
+                'border-radius': '20px ',
+            })
+            add.on("mouseover", function () {
+                $(this).addClass("change")
+            })
 
-        const add_emojy_2 = $(emojy[1]);
-        add_emojy_2.appendTo(div_3)
-        add_emojy_2.css({
-            'position': 'relative',
-            'top': '220px',
-            "margin": '20px',
-            'height': '30px',
-            'width': '30px',
-            'border': '2px black ',
-        })
-        add_emojy_2.on("mouseover", function () {
-            $(this).addClass("change_1")
-        })
+            add.on("mouseout", function () {
+                $(this).removeClass("change")
+            })
 
-        add_emojy_2.on("mouseout", function () {
-            $(this).removeClass("change_1")
-        })
+            const add_emojy_1 = $(emojy[0]);
+            add_emojy_1.appendTo(div_3)
+            add_emojy_1.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border': '2px black ',
+            })
+            add_emojy_1.on("mouseover", function () {
+                $(this).addClass("change_1")
+            })
 
-        add_emojy_2.on("click", function () {
-        })
+            add_emojy_1.on("mouseout", function () {
+                $(this).removeClass("change_1")
+            })
 
-        const add_emojy_3 = $(emojy[2]);
-        add_emojy_3.appendTo(div_3)
-        add_emojy_3.css({
-            'position': 'relative',
-            'top': '220px',
-            "margin": '20px',
-            'height': '30px',
-            'width': '30px',
-            'border': '2px black ',
-        })
-        add_emojy_3.on("mouseover", function () {
-            $(this).addClass("change_1")
-        })
+            add_emojy_1.on("click", function () {
 
-        add_emojy_3.on("mouseout", function () {
-            $(this).removeClass("change_1")
-        })
+                green_arr.splice(i, 1);
+                render_greenLand();
 
-        add_emojy_3.on("click", function () {
-            favorite.push( green_arr[i]);
-            localStorage.setItem("list_data_key", JSON.stringify(favorite));
-            add_emojy_3.unbind('click')
+            })
 
-        })
+            const add_emojy_2 = $(emojy[1]);
+            add_emojy_2.appendTo(div_3)
+            add_emojy_2.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border': '2px black ',
+            })
+            add_emojy_2.on("mouseover", function () {
+                $(this).addClass("change_1")
+            })
 
-        const add_emojy_4 = $(emojy[3]);
-        add_emojy_4.appendTo(div_3)
-        add_emojy_4.css({
-            'position': 'relative',
-            'top': '220px',
-            "margin": '20px',
-            'height': '30px',
-            'width': '30px',
-            'border': '2px black ',
-        })
-        add_emojy_4.on("mouseover", function () {
-            $(this).addClass("change_1")
-        })
+            add_emojy_2.on("mouseout", function () {
+                $(this).removeClass("change_1")
+            })
 
-        add_emojy_4.on("mouseout", function () {
-            $(this).removeClass("change_1")
-        })
+            add_emojy_2.on("click", function () {
+            })
 
-        add_emojy_4.on("click", function () {
+            const add_emojy_3 = $(emojy[2]);
+            add_emojy_3.appendTo(div_3)
+            add_emojy_3.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border': '2px black ',
+            })
+            add_emojy_3.on("mouseover", function () {
+                $(this).addClass("change_1")
+            })
+
+            add_emojy_3.on("mouseout", function () {
+                $(this).removeClass("change_1")
+            })
+
+            add_emojy_3.on("click", function () {
+                if (favorite.indexOf(green_arr[i])===-1) {
+                favorite.push(green_arr[i]);
+                localStorage.setItem("list_data_key", JSON.stringify(favorite));
+                add_emojy_3.unbind('click')
+                }
+            })
+
+            const add_emojy_4 = $(emojy[3]);
+            add_emojy_4.appendTo(div_3)
+            add_emojy_4.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border': '2px black ',
+            })
+            add_emojy_4.on("mouseover", function () {
+                $(this).addClass("change_1")
+            })
+
+            add_emojy_4.on("mouseout", function () {
+                $(this).removeClass("change_1")
+            })
+
+            add_emojy_4.on("click", function () {
 
 
-        })
+            })
+
+        }
 
     }
-
-}
-greenLand.on('click', render_greenLand);
+    greenLand.on('click', render_greenLand);
 
 
-const render_all = () => {
-    const all_arr = flowers_arr.concat(animals_arr).concat(green_arr);
-    $("#show").html("");
-    for (let i = 0; i < all_arr.length; i++) {
-        const add = $(`<img src=${all_arr[i]} style="height: 300px; width: 300px;">`);
-        add.appendTo(gallery_1)
-        add.css({
-            'position': 'relative',
-            'top': '220px',
-            'border-radius': '20px ',
-        })
-        add.on("mouseover", function () {
-            $(this).addClass("change")
-        })
+    const render_all = () => {
+        const all_arr = flowers_arr.concat(animals_arr).concat(green_arr);
+        $("#show").html("");
+        for (let i = 0; i < all_arr.length; i++) {
+            const add = $(`<img src=${all_arr[i]} style="height: 300px; width: 300px;">`);
+            add.appendTo(gallery_1)
+            add.css({
+                'position': 'relative',
+                'top': '220px',
+                'border-radius': '20px ',
+            })
+            add.on("mouseover", function () {
+                $(this).addClass("change")
+            })
 
-        add.on("mouseout", function () {
-            $(this).removeClass("change")
-        })
+            add.on("mouseout", function () {
+                $(this).removeClass("change")
+            })
+        }
     }
-}
-all.on('click', render_all);
+    all.on('click', render_all);
 
-gallery_1.css({
-    "display": "grid",
-    'grid-template-columns': '300px 300px 300px',
-    'gap': '100px',
-    'justify-content': 'start',
-    //'margin-left': "50px",
-})
+    gallery_1.css({
+        "display": "grid",
+        'grid-template-columns': '300px 300px 300px',
+        'gap': '100px',
+        'justify-content': 'start',
+        //'margin-left': "50px",
+    })
 })
 
-   $("#favorit").on('click',()=>{
+$("#favorit").on('click', () => {
     gallery.html("");
     let storedData = localStorage.getItem("list_data_key");
-      console.log("1",storedData,"2",favorite)
-      if (storedData) {
+    console.log("1", storedData, "2", favorite)
+    if (storedData) {
         favorite = JSON.parse(storedData);
-        
-    } 
 
-        const div_11 = $('<div id="f"></div>')
-          div_11.appendTo(gallery)
+    }
 
-         div_11.css({
-            "display": "grid",
-            'grid-template-columns': '300px 300px 300px',
-            'gap': '100px',
-            'justify-content': 'start',
-            'margin-left': "50px",
+    const div_11 = $('<div id="f"></div>')
+    div_11.appendTo(gallery)
+
+    div_11.css({
+        "display": "grid",
+        'grid-template-columns': '300px 300px 300px',
+        'gap': '100px',
+        'justify-content': 'start',
+        'margin-left': "50px",
+    })
+
+    for (let i = 0; i < favorite.length; i++) {
+        const add = $(`<img src=${favorite[i]} style="height: 300px; width: 300px;">`);
+        add.appendTo(div_11)
+        add.css({
+            'position': 'relative',
+            'top': '220px',
+            'border-radius': '20px ',
+        })
+        add.on("mouseover", function () {
+            $(this).addClass("change")
         })
 
-            for (let i = 0; i < favorite.length; i++) {
-                const add = $(`<img src=${favorite[i]} style="height: 300px; width: 300px;">`);
-                add.appendTo(div_11)
-                add.css({
-                    'position': 'relative',
-                    'top': '220px',
-                    'border-radius': '20px ',
-                })
-                add.on("mouseover", function () {
-                    $(this).addClass("change")
-                })
-        
-                add.on("mouseout", function () {
-                    $(this).removeClass("change")
-                })
-            }
-
+        add.on("mouseout", function () {
+            $(this).removeClass("change")
         })
+    }
+
+})
