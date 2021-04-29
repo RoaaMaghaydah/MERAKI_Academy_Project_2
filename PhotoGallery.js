@@ -24,7 +24,7 @@ const green_arr = ["https://lh3.googleusercontent.com/proxy/3T1zW7ui8Z3hrdHZwC9p
     "https://pic.i7lm.com/wp-content/uploads/2019/07/%D8%A3%D8%AD%D9%84%D9%8A-%D8%B5%D9%88%D8%B1-%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9-780x405.jpg",
     "https://www.zyadda.com/wp-content/uploads/2021/02/%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-%D8%B9%D9%86-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D8%A9.jpg"]
 
-const emojy = [`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-x" viewBox="0 0 16 16">
+const emojy = [`<svg id="img1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-x" viewBox="0 0 16 16">
 <path d="M6.854 7.146a.5.5 0 1 0-.708.708L7.293 9l-1.147 1.146a.5.5 0 0 0 .708.708L8 9.707l1.146 1.147a.5.5 0 0 0 .708-.708L8.707 9l1.147-1.146a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146z"/>
 <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
 </svg>`, `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16">
@@ -235,7 +235,7 @@ const render_flowers = () => {
             'height': '30px',
             'width': '30px',
             'border': '2px black ',
-            'cursor': 'block'
+            //'cursor': 'block',
         })
         add_emojy_3.on("mouseover", function () {
             $(this).addClass("change_1")
@@ -248,7 +248,7 @@ const render_flowers = () => {
         add_emojy_3.on("click", function () {
             favorite.push(flowers_arr[i]);
             localStorage.setItem("list_data_key", JSON.stringify(favorite));
-         
+           // add_emojy_3.attr("disabled", "disabled")
         })
 
         const add_emojy_4 = $(emojy[3]);
@@ -396,6 +396,8 @@ const render_animals = () => {
         })
 
         add_emojy_3.on("click", function () {
+            favorite.push(animals_arr[i]);
+            localStorage.setItem("list_data_key", JSON.stringify(favorite));
         })
 
         const add_emojy_4 = $(emojy[3]);
@@ -543,6 +545,8 @@ const render_greenLand = () => {
         })
 
         add_emojy_3.on("click", function () {
+            favorite.push( green_arr[i]);
+            localStorage.setItem("list_data_key", JSON.stringify(favorite));
         })
 
         const add_emojy_4 = $(emojy[3]);
@@ -601,7 +605,7 @@ gallery_1.css({
     'grid-template-columns': '300px 300px 300px',
     'gap': '100px',
     'justify-content': 'start',
-    'margin-left': "50px",
+    //'margin-left': "50px",
 })
 })
 
@@ -609,6 +613,10 @@ gallery_1.css({
     gallery.html("");
     let storedData = localStorage.getItem("list_data_key");
       console.log("1",storedData,"2",favorite)
+      if (storedData) {
+        favorite = JSON.parse(storedData);
+        
+    } 
 
         const div_11 = $('<div id="f"></div>')
           div_11.appendTo(gallery)
