@@ -249,6 +249,8 @@ const render_flowers = () => {
             favorite.push(flowers_arr[i]);
             localStorage.setItem("list_data_key", JSON.stringify(favorite));
            // add_emojy_3.attr("disabled", "disabled")
+           add_emojy_3.unbind('click')
+
         })
 
         const add_emojy_4 = $(emojy[3]);
@@ -398,7 +400,9 @@ const render_animals = () => {
         add_emojy_3.on("click", function () {
             favorite.push(animals_arr[i]);
             localStorage.setItem("list_data_key", JSON.stringify(favorite));
+            add_emojy_3.unbind('click')
         })
+        
 
         const add_emojy_4 = $(emojy[3]);
         add_emojy_4.appendTo(div_3)
@@ -547,6 +551,8 @@ const render_greenLand = () => {
         add_emojy_3.on("click", function () {
             favorite.push( green_arr[i]);
             localStorage.setItem("list_data_key", JSON.stringify(favorite));
+            add_emojy_3.unbind('click')
+
         })
 
         const add_emojy_4 = $(emojy[3]);
