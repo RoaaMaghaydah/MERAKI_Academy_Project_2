@@ -47,7 +47,8 @@ gallery.css({
     'margin-left': "50px",
 });
 
-$("#home").on('click', () => {
+
+const rander=() => {
     gallery.html("");
     const flowers = $('<button id="imgs_2"> flowers</button>');
     const all = $('<button "> All</button>');
@@ -693,7 +694,7 @@ $("#home").on('click', () => {
         'justify-content': 'start',
         //'margin-left': "50px",
     })
-})
+}
 
 $("#favorit").on('click', () => {
     gallery.html("");
@@ -733,3 +734,6 @@ $("#favorit").on('click', () => {
     }
 
 })
+
+rander();
+$("#home").on('click',rander);
