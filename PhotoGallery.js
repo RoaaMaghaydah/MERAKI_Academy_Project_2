@@ -740,3 +740,62 @@ $("#favorit").on('click', () => {
 
 rander();
 $("#home").on('click', rander);
+//////////////////////////////////////////////////
+$("#login").on('click', () => {
+    gallery.html("");
+ const div = $('<div id="div_0"></div>')
+ div.appendTo(gallery)
+ const div_c1 = $('<div"></div>')
+ div.appendTo(div)
+ const div_c2 = $('<div"></div>')
+ div.appendTo(div)
+const p_username=$('<p> User name :</p>')
+ p_username.appendTo(div_c1)
+const username=$('<input type="text">')
+username.appendTo(div_c1)
+const p_password=$('<p> Password :</p>')
+p_password.appendTo(div_c2)
+const password=$('<input type="password">')
+password.appendTo(div_c2);
+
+
+div.css({
+    "display": "grid",
+
+    'gap': '50px',
+    'justify-content': 'start',
+    'margin-left': "50px",
+});
+
+div_c1.css({
+    "display": "grid",
+    'grid-template-columns': '100px 100px',
+    'gap': '50px',
+    'justify-content': 'start',
+    'margin-left': "50px",
+});
+
+div_c2.css({
+    "display": "grid",
+    'grid-template-columns': '100px 100px ',
+    'gap': '50px',
+    'justify-content': 'start',
+    'margin-left': "50px",
+});
+
+username.css({
+    'position': 'relative',
+    'top': '220px',
+    'font-size': "15px",
+    'border-radius': '20px ',
+    
+})
+
+password.css({
+    'position': 'relative',
+    'top': '220px',
+    'font-size': "15px",
+    'border-radius': '20px ',
+    
+})
+})
