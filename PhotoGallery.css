@@ -43,6 +43,7 @@ border: 2px solid white;
 
 };
 
+
 .perant{
 
     display: grid;
@@ -76,6 +77,19 @@ left: 50px;
     
    
 }
+
+#startLogin{
+    display: grid;
+    grid-template-rows: 30px 30px 40px;
+    gap: 30px;
+    justify-content:start;
+    justify-items: start;
+    font-size: 20px;
+    margin-left: 50px;
+    position: absolute;
+    top: 390px;
+    
+ }
 
 .change{
     height:320px !important;

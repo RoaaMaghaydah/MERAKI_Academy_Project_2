@@ -51,6 +51,7 @@ gallery.css({
 
 
 const rander = () => {
+    $('#startLogin').html('')
     gallery.html("");
     const flowers = $('<button id="imgs_2"> flowers</button>');
     const all = $('<button "> All</button>');
@@ -702,6 +703,7 @@ const rander = () => {
 }
 
 $("#favorit").on('click', () => {
+    $('#startLogin').html('')
     gallery.html("");
     let storedData = localStorage.getItem("list_data_key");
     console.log("1", storedData, "2", favorite)
@@ -740,10 +742,11 @@ $("#favorit").on('click', () => {
 
 })
 
-rander();
+//rander();
 $("#home").on('click', rander);
 //////////////////////////////////////////////////
 $("#login").on('click', () => {
+    $('#startLogin').html('')
     gallery.html("");
     const div = $('<div id="div_0"></div>')
     div.appendTo(gallery)
@@ -850,3 +853,7 @@ $("#login").on('click', () => {
     })
 
 })
+
+
+
+
