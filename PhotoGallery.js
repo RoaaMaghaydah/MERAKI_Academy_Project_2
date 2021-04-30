@@ -48,7 +48,7 @@ gallery.css({
 });
 
 
-const rander=() => {
+const rander = () => {
     gallery.html("");
     const flowers = $('<button id="imgs_2"> flowers</button>');
     const all = $('<button "> All</button>');
@@ -61,31 +61,34 @@ const rander=() => {
 
     all.css({
         'position': 'relative',
-        'top': '200px',
+        'top': '170px',
         'background-color': 'white',
         'border-radius': '20px'
     });
 
     flowers.css({
         'position': 'relative',
-        'top': '200px',
+        'top': '170px',
         'background-color': 'white',
         'border-radius': '20px'
     });
     animals.css({
         'position': 'relative',
-        'top': '200px',
+        'top': '170px',
         'background-color': 'white',
         'border-radius': '20px'
     });
     greenLand.css({
         'position': 'relative',
-        'top': '200px',
+        'top': '170px',
         'background-color': 'white',
         'border-radius': '20px'
     });
-
-
+    all.on("click", function () {
+        $(this).addClass("act")
+    })
+   
+ 
     all.on("mouseover", function () {
         $(this).addClass("button")
     })
@@ -186,10 +189,10 @@ const rander=() => {
                 lightbox[0].classList.add('active')
                 const img_2 = $(`<img src=${flowers_arr[i]} style="height: 500px; width: 500px;"></img>`)
                 img_2.css({
-                    'background-color':'black' ,
-                   'border':'2px solid white',
-                   })
-   
+                    'background-color': 'black',
+                    'border': '2px solid white',
+                })
+
                 while (lightbox[0].firstChild) {
                     lightbox[0].removeChild(lightbox[0].firstChild)
                 }
@@ -361,8 +364,8 @@ const rander=() => {
                 lightbox[0].classList.add('active')
                 const img_2 = $(`<img src=${animals_arr[i]} style="height: 500px; width: 500px;"></img>`)
                 img_2.css({
-                 'background-color':'black' ,
-                'border':'2px solid white',
+                    'background-color': 'black',
+                    'border': '2px solid white',
                 })
 
                 while (lightbox[0].firstChild) {
@@ -546,10 +549,10 @@ const rander=() => {
                 lightbox[0].classList.add('active')
                 const img_2 = $(`<img src=${green_arr[i]} style="height: 500px; width: 500px;"></img>`)
                 img_2.css({
-                    'background-color':'black' ,
-                   'border':'2px solid white',
-                   })
-   
+                    'background-color': 'black',
+                    'border': '2px solid white',
+                })
+
                 while (lightbox[0].firstChild) {
                     lightbox[0].removeChild(lightbox[0].firstChild)
                 }
@@ -736,4 +739,4 @@ $("#favorit").on('click', () => {
 })
 
 rander();
-$("#home").on('click',rander);
+$("#home").on('click', rander);

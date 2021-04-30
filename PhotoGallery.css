@@ -1,6 +1,6 @@
 
 body{
-    background-image: url("https://i.redd.it/vdhgv54ndnj21.png");
+    background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZsYXQlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
 
     background-size:1400px 350px;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@ justify-content:end;
 justify-items: center;
 font-size: 20px;
 margin: 5px;
-background-color: black;
+background-color: rgb(6, 49, 20);
 border: 2px solid white;
 /*color: white;*/
 };
@@ -57,12 +57,12 @@ border: 2px solid white;
 position: relative;
 top :30px;
 left: 50px;
- color: rgb(65, 4, 43);
+ color: rgba(6, 49, 20, 0.555);
  font-size: 70px;
  font-family: 'Times New Roman', Times, serif;
  font-weight: bold;
  font-style: italic;
- text-shadow:  0 0 10px white,0 0 5px white;
+ text-shadow:  0 0 10px white,0 0 5px rgb(0, 173, 52);
 }
 
 #theme{
