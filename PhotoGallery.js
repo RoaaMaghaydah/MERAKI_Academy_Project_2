@@ -745,10 +745,12 @@ $("#login").on('click', () => {
     gallery.html("");
  const div = $('<div id="div_0"></div>')
  div.appendTo(gallery)
+
  const div_c1 = $('<div"></div>')
- div.appendTo(div)
+ div_c1.appendTo(div)
  const div_c2 = $('<div"></div>')
- div.appendTo(div)
+ div_c2.appendTo(div)
+
 const p_username=$('<p> User name :</p>')
  p_username.appendTo(div_c1)
 const username=$('<input type="text">')
@@ -761,7 +763,6 @@ password.appendTo(div_c2);
 
 div.css({
     "display": "grid",
-
     'gap': '50px',
     'justify-content': 'start',
     'margin-left': "50px",
@@ -773,6 +774,8 @@ div_c1.css({
     'gap': '50px',
     'justify-content': 'start',
     'margin-left': "50px",
+    'position': 'relative',
+    'top': '220px',
 });
 
 div_c2.css({
@@ -781,19 +784,19 @@ div_c2.css({
     'gap': '50px',
     'justify-content': 'start',
     'margin-left': "50px",
+    'position': 'relative',
+    'top': '220px',
 });
 
 username.css({
-    'position': 'relative',
-    'top': '220px',
+    
     'font-size': "15px",
     'border-radius': '20px ',
     
 })
 
 password.css({
-    'position': 'relative',
-    'top': '220px',
+    
     'font-size': "15px",
     'border-radius': '20px ',
     
