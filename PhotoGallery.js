@@ -742,7 +742,7 @@ $("#favorit").on('click', () => {
 })
 
 //rander();
-$("#home").on('click', rander);
+//$("#home").on('click', rander);
 //////////////////////////////////////////////////
 $("#login").on('click', () => {
     $('#startLogin').html('')
@@ -755,11 +755,11 @@ $("#login").on('click', () => {
     const div_c2 = $('<div"></div>')
     div_c2.appendTo(div)
 
-    const p_username = $('<p> User name :</p>')
+    const p_username = $('<p> Username:</p>')
     p_username.appendTo(div_c1)
     const username = $('<input type="text">')
     username.appendTo(div_c1)
-    const p_password = $('<p> Password :</p>')
+    const p_password = $('<p> password:</p>')
     p_password.appendTo(div_c2)
     const password = $('<input type="password">')
     password.appendTo(div_c2);
@@ -767,7 +767,7 @@ $("#login").on('click', () => {
 
     div.css({
         "display": "grid",
-        'gap': '50px',
+        'gap': '30px',
         'justify-content': 'start',
         'margin-left': "20px",
         // 'border': '5px solid black',
@@ -778,7 +778,7 @@ $("#login").on('click', () => {
     div_c1.css({
         "display": "grid",
         'grid-template-columns': '100px 200px',
-        'gap': '10px',
+        'gap': '20px',
         'justify-content': 'center',
         // 'margin-right': "50px",
 
@@ -787,7 +787,7 @@ $("#login").on('click', () => {
     div_c2.css({
         "display": "grid",
         'grid-template-columns': '100px 200px ',
-        'gap': '10px',
+        'gap': '20px',
         'justify-content': 'center',
         //'margin-right': "50px",  
     });
@@ -806,7 +806,7 @@ $("#login").on('click', () => {
     p_username.css({
 
         'color': 'rgb(6, 49, 20)',
-        'font-size': '15px',
+        'font-size': '20px',
         'font-family': `Times New Roman', Times, serif;`,
         'font-weight': 'bold',
         'font-style': 'italic',
@@ -814,7 +814,7 @@ $("#login").on('click', () => {
     p_password.css({
 
         'color': 'rgb(6, 49, 20)',
-        'font-size': '15px',
+        'font-size': '20px',
         'font-family': `Times New Roman', Times, serif;`,
         'font-weight': 'bold',
         'font-style': 'italic',
@@ -825,7 +825,8 @@ $("#login").on('click', () => {
 
     loginButton.css({
 
-        'color': 'rgb(6, 49, 20)',
+        'background-color': 'rgb(6, 49, 20)',
+        'color':'white',
         'font-size': '15px',
         'font-family': `Times New Roman', Times, serif;`,
         'font-weight': 'bold',
@@ -850,6 +851,7 @@ $("#login").on('click', () => {
             }
         }
     })
+    $("#home").on('click', rander);
 
 })
 
@@ -868,10 +870,12 @@ const test=()=>{
 
      if($("#loginInput").val()===username_arr[i]||$("#loginInput1").val()===password_arr[i]){
         rander();
+
      }
   
     
 }
+$("#home").on('click', rander);
   
   }
   

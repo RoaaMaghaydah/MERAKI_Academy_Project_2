@@ -29,7 +29,7 @@ a:active{
 }
 
 
-.div1{
+#div1{
 display: grid;
 grid-template-columns: 100px 100px 100px;
 gap: 30px;
@@ -74,30 +74,54 @@ left: 50px;
     position: sticky;
     bottom:0;
     left: 0;
-    
-   
 }
 
 #startLogin{
     display: grid;
-    grid-template-rows: 30px 30px 40px;
-    gap: 30px;
+    grid-template-rows: 20px 20px 20px 20px;
+    gap: 15px;
     justify-content:start;
     justify-items: start;
     font-size: 20px;
     margin-left: 50px;
-    position: absolute;
-    top: 390px;
+    position:absolute;
+    top: 360px;
     
  }
 
+ h4{
+    color: rgb(6, 49, 20);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+ }
+ 
+ h5{
+    color: rgb(6, 49, 20);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+ }
+ 
+
  #loginInput{
      border-radius: 40px;
-
+     font-size: 15px;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: bold;
+     font-style: italic;
+     width: 200px;
+     height: 36px;
      
  }
  #loginInput1{
-    border-radius: 40px;   
+    border-radius: 40px; 
+    font-size: 15px;  
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    width: 200px;
+    height: 36px;
 }
 
  #loginbutton{
@@ -112,6 +136,7 @@ left: 50px;
     height: 36px;
 
  }
+ 
 
 .change{
     height:320px !important;
