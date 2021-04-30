@@ -33,8 +33,8 @@ const emojy = [`<svg id="img1" xmlns="http://www.w3.org/2000/svg" width="16" hei
 </svg>`];
 
 let favorite = [];
-let username_arr=[];
-let password_arr=[];
+let username_arr = [];
+let password_arr = [];
 let bool = true;
 
 ///////////////////////////////////////////////////////////////////
@@ -89,8 +89,8 @@ const rander = () => {
     all.on("click", function () {
         $(this).addClass("act")
     })
-   
- 
+
+
     all.on("mouseover", function () {
         $(this).addClass("button")
     })
@@ -745,107 +745,108 @@ $("#home").on('click', rander);
 //////////////////////////////////////////////////
 $("#login").on('click', () => {
     gallery.html("");
- const div = $('<div id="div_0"></div>')
- div.appendTo(gallery)
+    const div = $('<div id="div_0"></div>')
+    div.appendTo(gallery)
 
- const div_c1 = $('<div"></div>')
- div_c1.appendTo(div)
- const div_c2 = $('<div"></div>')
- div_c2.appendTo(div)
+    const div_c1 = $('<div"></div>')
+    div_c1.appendTo(div)
+    const div_c2 = $('<div"></div>')
+    div_c2.appendTo(div)
 
-const p_username=$('<p> User name :</p>')
- p_username.appendTo(div_c1)
-const username=$('<input type="text">')
-username.appendTo(div_c1)
-const p_password=$('<p> Password :</p>')
-p_password.appendTo(div_c2)
-const password=$('<input type="password">')
-password.appendTo(div_c2);
+    const p_username = $('<p> User name :</p>')
+    p_username.appendTo(div_c1)
+    const username = $('<input type="text">')
+    username.appendTo(div_c1)
+    const p_password = $('<p> Password :</p>')
+    p_password.appendTo(div_c2)
+    const password = $('<input type="password">')
+    password.appendTo(div_c2);
 
 
-div.css({
-    "display": "grid",
-    'gap': '50px',
-    'justify-content': 'start',
-    'margin-left': "20px",
-   // 'border': '5px solid black',
-    'position': 'relative',
-     'top': '170px',
-});
+    div.css({
+        "display": "grid",
+        'gap': '50px',
+        'justify-content': 'start',
+        'margin-left': "20px",
+        // 'border': '5px solid black',
+        'position': 'relative',
+        'top': '170px',
+    });
 
-div_c1.css({
-    "display": "grid",
-    'grid-template-columns': '100px 200px',
-    'gap': '10px',
-    'justify-content': 'center',
-   // 'margin-right': "50px",
- 
-});
+    div_c1.css({
+        "display": "grid",
+        'grid-template-columns': '100px 200px',
+        'gap': '10px',
+        'justify-content': 'center',
+        // 'margin-right': "50px",
 
-div_c2.css({
-    "display": "grid",
-    'grid-template-columns': '100px 200px ',
-    'gap': '10px',
-    'justify-content': 'center',
-    //'margin-right': "50px",  
-});
+    });
 
-username.css({
-    
-    'font-size': "15px",
-    'border-radius': '20px ',    
-})
+    div_c2.css({
+        "display": "grid",
+        'grid-template-columns': '100px 200px ',
+        'gap': '10px',
+        'justify-content': 'center',
+        //'margin-right': "50px",  
+    });
 
-password.css({    
-    'font-size': "15px",
-    'border-radius': '20px ',
-    
-})
-p_username.css({
-    
-    'color':'rgb(6, 49, 20)',
-    'font-size':'15px',
-    'font-family': `Times New Roman', Times, serif;`,
-    'font-weight':'bold',
-    'font-style':'italic', 
-})
-p_password.css({
-    
-    'color':'rgb(6, 49, 20)',
-    'font-size':'15px',
-    'font-family': `Times New Roman', Times, serif;`,
-    'font-weight':'bold',
-    'font-style':'italic', 
-})
- 
-const loginButton=$('<button>register</button>')
- loginButton.appendTo(div);
+    username.css({
 
-loginButton.css({
-    
-    'color':'rgb(6, 49, 20)',
-    'font-size':'15px',
-    'font-family': `Times New Roman', Times, serif;`,
-    'font-weight':'bold',
-    'font-style':'italic',
-    'border-radius':'40px',
-    'height': '40px',
-    'width': '120px',
-    'position': 'relative',
-     'left': '110px',
+        'font-size': "15px",
+        'border-radius': '20px ',
+    })
 
-})
+    password.css({
+        'font-size': "15px",
+        'border-radius': '20px ',
 
-loginButton.on('click',()=>{
+    })
+    p_username.css({
 
-    if(username.val()!=="" &&password.val()!==""){
-    if(username_arr.indexOf(username.val())===-1 ||password_arr.indexOf(password.val())===-1)
-    {
-     username_arr.push(username.val());
-     password_arr.push(password.val());
-     console.log(username_arr,password_arr)
-    }
-    }
-})
+        'color': 'rgb(6, 49, 20)',
+        'font-size': '15px',
+        'font-family': `Times New Roman', Times, serif;`,
+        'font-weight': 'bold',
+        'font-style': 'italic',
+    })
+    p_password.css({
+
+        'color': 'rgb(6, 49, 20)',
+        'font-size': '15px',
+        'font-family': `Times New Roman', Times, serif;`,
+        'font-weight': 'bold',
+        'font-style': 'italic',
+    })
+
+    const loginButton = $('<button>register</button>')
+    loginButton.appendTo(div);
+
+    loginButton.css({
+
+        'color': 'rgb(6, 49, 20)',
+        'font-size': '15px',
+        'font-family': `Times New Roman', Times, serif;`,
+        'font-weight': 'bold',
+        'font-style': 'italic',
+        'border-radius': '40px',
+        'height': '40px',
+        'width': '120px',
+        'position': 'relative',
+        'left': '110px',
+
+    })
+
+    loginButton.on('click', () => {
+
+        if (username.val() !== "" && password.val() !== "") {
+            if (username_arr.indexOf(username.val()) === -1 || password_arr.indexOf(password.val()) === -1) {
+                username_arr.push(username.val());
+                password_arr.push(password.val());
+                localStorage.setItem("list_username", JSON.stringify(username_arr));
+                localStorage.setItem("list_password", JSON.stringify(password_arr));
+
+            }
+        }
+    })
 
 })
