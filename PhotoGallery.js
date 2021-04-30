@@ -706,7 +706,6 @@ $("#favorit").on('click', () => {
     $('#startLogin').html('')
     gallery.html("");
     let storedData = localStorage.getItem("list_data_key");
-    console.log("1", storedData, "2", favorite)
     if (storedData) {
         favorite = JSON.parse(storedData);
 
@@ -854,6 +853,28 @@ $("#login").on('click', () => {
 
 })
 
+
+const test=()=>{
+    let storedData = localStorage.getItem("list_username");
+      if (storedData) {
+        username_arr = JSON.parse(storedData);
+      }
+
+      let storedData1 = localStorage.getItem("list_password");
+      if (storedData1) {
+        password_arr = JSON.parse(storedData1);
+      }
+      for(let i=0;i<password_arr.length;i++){
+
+     if($("#loginInput").val()===username_arr[i]||$("#loginInput1").val()===password_arr[i]){
+        rander();
+     }
+  
+    
+}
+  
+  }
+  
 
 
 

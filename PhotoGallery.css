@@ -91,6 +91,28 @@ left: 50px;
     
  }
 
+ #loginInput{
+     border-radius: 40px;
+
+     
+ }
+ #loginInput1{
+    border-radius: 40px;   
+}
+
+ #loginbutton{
+    border-radius: 40px;
+    background-color: rgb(6, 49, 20);
+    color: white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    width: 90px;
+    height: 36px;
+
+ }
+
 .change{
     height:320px !important;
     width: 320px !important;   
