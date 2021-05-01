@@ -16,7 +16,7 @@ const animals_arr = ["https://i.pinimg.com/originals/e3/32/3f/e3323fc80a203239e2
     "https://img.jakpost.net/c/2019/06/25/2019_06_25_75103_1561445774._large.jpg", "https://i.redd.it/4m2ypc8v0p221.jpg", "https://sf.ezoiccdn.com/ezoimgfmt/meowlogy.com/wp-content/uploads/2017/04/Cute-animals-66.jpg?ezimgfmt=rs:392x581/rscb2/ng:webp/ngcb2",
     "https://images.saymedia-content.com/.image/t_share/MTc0MzIwMjM1MTk1NjcxOTEy/top-ten-cutest-japanese-wild-animals.jpg"]
 
-const green_arr = ["https://lh3.googleusercontent.com/proxy/3T1zW7ui8Z3hrdHZwC9po_eMU5YVD_E8bt3yYreVWcJQHw5Otpe09cESWp0eqo0UgMXUiQmFJAhbFFAronGC1pXQZdCiQ5R0C6DB8Iq46ms", "http://1.bp.blogspot.com/-TtzbPEk88Mc/VnJ4qdOsZxI/AAAAAAAADd4/mSHI7N25dP0/s1600/%25D8%25B5%25D9%2588%25D8%25B1%2B%25D8%25B7%25D8%25A8%25D9%258A%25D8%25B9%25D8%25A9-%25D8%25B5%25D9%2588%25D8%25B1%2B%25D8%25B7%25D8%25A8%25D9%258A%25D8%25B9%25D9%258A%25D8%25A9-%2B%25D9%2585%25D9%2586%25D8%25A7%25D8%25B8%25D8%25B1%2B%25D8%25B7%25D8%25A8%25D9%258A%25D8%25B9%25D9%258A%25D8%25A9-%2B%25D8%25B5%25D9%2588%25D8%25B1%2B%25D8%25A3%25D9%2586%25D9%2587%25D8%25A7%25D8%25B1.jpg",
+const green_arr = ["https://2.bp.blogspot.com/-NRULCFKJGUw/VdKFaeFVZRI/AAAAAAAAAQg/jAL6_4-pkn8/s1600/natural-hd-wallpapers-for-pc.jpg", "http://1.bp.blogspot.com/-TtzbPEk88Mc/VnJ4qdOsZxI/AAAAAAAADd4/mSHI7N25dP0/s1600/%25D8%25B5%25D9%2588%25D8%25B1%2B%25D8%25B7%25D8%25A8%25D9%258A%25D8%25B9%25D8%25A9-%25D8%25B5%25D9%2588%25D8%25B1%2B%25D8%25B7%25D8%25A8%25D9%258A%25D8%25B9%25D9%258A%25D8%25A9-%2B%25D9%2585%25D9%2586%25D8%25A7%25D8%25B8%25D8%25B1%2B%25D8%25B7%25D8%25A8%25D9%258A%25D8%25B9%25D9%258A%25D8%25A9-%2B%25D8%25B5%25D9%2588%25D8%25B1%2B%25D8%25A3%25D9%2586%25D9%2587%25D8%25A7%25D8%25B1.jpg",
     "https://www.arabeuropa.com/wp-content/uploads/2019/02/7J9-H1H_thumb2.jpg", "http://lh3.ggpht.com/-olkU-hZWK3Q/T-l_MXj8AyI/AAAAAAAAEns/Rjtqk1bC8rA/7%252528J9%252529%252520%25252737F%252528HD%2525201_thumb%25255B2%25255D.jpg?imgmax=800",
     "https://pic.i7lm.com/wp-content/uploads/2019/07/%D8%A3%D8%AD%D9%84%D9%8A-%D8%B5%D9%88%D8%B1-%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9-780x405.jpg",
     "https://www.zyadda.com/wp-content/uploads/2021/02/%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-%D8%B9%D9%86-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D8%A9.jpg"]
@@ -56,7 +56,7 @@ const rander = () => {
     const flowers = $('<button id="imgs_2"> flowers</button>');
     const all = $('<button "> All</button>');
     const animals = $('<button > animals</button>');
-    const greenLand = $('<button> nature</button>');
+    const greenLand = $('<button> nachural</button>');
     all.appendTo(gallery);
     flowers.appendTo(gallery);
     animals.appendTo(gallery);
@@ -856,7 +856,9 @@ $("#login").on('click', () => {
                 localStorage.setItem("list_password", JSON.stringify(password_arr));
 
             }
+            rander();
         }
+        
     })
 
     const backButton = $('<button> <a href="PhotoGallrey.html">Back to Login </a></button>')
