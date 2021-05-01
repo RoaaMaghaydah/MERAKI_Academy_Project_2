@@ -9,6 +9,7 @@ body{
     
 }
 a:link{
+    
     text-decoration: none;
 }
 
@@ -21,10 +22,12 @@ a:visited{
 }
 
 a:hover{
+    
     text-decoration: underline;
 }
 a:active{
-   
+   color: black;
+   background-color: white;
     text-decoration:underline;
 }
 

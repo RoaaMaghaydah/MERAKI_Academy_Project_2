@@ -702,7 +702,8 @@ const rander = () => {
     })
 }
 
-$("#favorit").on('click', () => {
+
+const favoritFunction = () => {
     $('#startLogin').html('')
     gallery.html("");
     let storedData = localStorage.getItem("list_data_key");
@@ -739,7 +740,8 @@ $("#favorit").on('click', () => {
         })
     }
 
-})
+}
+
 
 //rander();
 //$("#home").on('click', rander);
@@ -754,6 +756,8 @@ $("#login").on('click', () => {
     div_c1.appendTo(div)
     const div_c2 = $('<div"></div>')
     div_c2.appendTo(div)
+    const div_c3 = $('<div"></div>')
+    div_c3.appendTo(div)
 
     const p_username = $('<p> Username:</p>')
     p_username.appendTo(div_c1)
@@ -767,10 +771,9 @@ $("#login").on('click', () => {
 
     div.css({
         "display": "grid",
-        'gap': '30px',
+        'gap': '20px',
         'justify-content': 'start',
         'margin-left': "20px",
-        // 'border': '5px solid black',
         'position': 'relative',
         'top': '170px',
     });
@@ -780,28 +783,35 @@ $("#login").on('click', () => {
         'grid-template-columns': '100px 200px',
         'gap': '20px',
         'justify-content': 'center',
-        // 'margin-right': "50px",
-
+       
     });
 
     div_c2.css({
         "display": "grid",
         'grid-template-columns': '100px 200px ',
         'gap': '20px',
+        'justify-content': 'center',  
+    });
+    div_c3.css({
+        "display": "grid",
+        'grid-template-columns': '100px 200px',
+        'gap': '30px',
         'justify-content': 'center',
-        //'margin-right': "50px",  
     });
 
     username.css({
 
         'font-size': "15px",
         'border-radius': '20px ',
+        'width': '300px',
+        'height': '36px',
     })
 
     password.css({
         'font-size': "15px",
         'border-radius': '20px ',
-
+        'width': '300px',
+        'height': '36px',
     })
     p_username.css({
 
@@ -821,12 +831,10 @@ $("#login").on('click', () => {
     })
 
     const loginButton = $('<button>register</button>')
-    loginButton.appendTo(div);
-
+    loginButton.appendTo(div_c3);
     loginButton.css({
-
         'background-color': 'rgb(6, 49, 20)',
-        'color':'white',
+        'color': 'white',
         'font-size': '15px',
         'font-family': `Times New Roman', Times, serif;`,
         'font-weight': 'bold',
@@ -835,8 +843,7 @@ $("#login").on('click', () => {
         'height': '40px',
         'width': '120px',
         'position': 'relative',
-        'left': '110px',
-
+        'left': '130px',
     })
 
     loginButton.on('click', () => {
@@ -851,34 +858,52 @@ $("#login").on('click', () => {
             }
         }
     })
-    $("#home").on('click', rander);
 
+    const backButton = $('<button> <a href="PhotoGallrey.html">Back to Login </a></button>')
+    backButton.appendTo(div_c3);
+    backButton.on('click', () => { })
+
+    backButton.css({
+        'background-color': 'rgb(6, 49, 20)',
+        'color': 'white',
+        'font-size': '15px',
+        'font-family': `Times New Roman', Times, serif;`,
+        'font-weight': 'bold',
+        'font-style': 'italic',
+        'border-radius': '40px',
+        'height': '40px',
+        'width': '120px',
+        'position': 'relative',
+        'left': '130px',
+    })
+   
 })
 
 
-const test=()=>{
+const test = () => {
     let storedData = localStorage.getItem("list_username");
-      if (storedData) {
+    if (storedData) {
         username_arr = JSON.parse(storedData);
-      }
+    }
 
-      let storedData1 = localStorage.getItem("list_password");
-      if (storedData1) {
+    let storedData1 = localStorage.getItem("list_password");
+    if (storedData1) {
         password_arr = JSON.parse(storedData1);
-      }
-      for(let i=0;i<password_arr.length;i++){
+    }
+    for (let i = 0; i < password_arr.length; i++) {
 
-     if($("#loginInput").val()===username_arr[i]||$("#loginInput1").val()===password_arr[i]){
-        rander();
+        if ($("#loginInput").val() === username_arr[i] || $("#loginInput1").val() === password_arr[i]) {
+            rander();
 
-     }
-  
-    
+        }
+
+
+    }
+    $("#home").on('click', rander);
+    $("#favorit").on('click', favoritFunction);
+
 }
-$("#home").on('click', rander);
-  
-  }
-  
+
 
 
 
