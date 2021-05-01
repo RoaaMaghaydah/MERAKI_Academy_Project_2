@@ -1,13 +1,10 @@
 
 body{
     background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZsYXQlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
-
     background-size:1400px 350px;
-    background-repeat: no-repeat;
-
-
-    
+    background-repeat: no-repeat;    
 }
+
 a:link{
     
     text-decoration: none;

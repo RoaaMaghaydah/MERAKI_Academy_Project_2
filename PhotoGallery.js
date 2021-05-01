@@ -1,16 +1,14 @@
 const body1 = $("body")
+const backgroundChange = $('#startDiv')
 const theme = $('#theme')
 
-theme.on("click", () => {
-
-    $t(his).addClass(change_backg);
+$('#theme').on("click", () => {
+    backgroundChange.addClass(change_backg);
 })
 ////////////////////////////////////////////////////////////////////
 const flowers_arr = ["https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg", "http://www.photon-echoes.com/images/nature/flowers/flower1.JPG",
     "https://empire-s3-production.bobvila.com/slides/26814/original/ganzia.jpg?1532362531", "https://sciencenotes.org/wp-content/uploads/2020/02/1280px-Glowing_flowers-1024x710.jpg", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-182880589-1493334765.jpg",
     "https://i0.wp.com/ae04.alicdn.com/kf/H7c41fbf0454a4aa2bda33efae67bfacbH.png_300x300.jpg"];
-
-
 
 const animals_arr = ["https://i.pinimg.com/originals/e3/32/3f/e3323fc80a203239e2a28ae23f83260a.jpg", "https://i.pinimg.com/originals/a4/0c/c0/a40cc0f58f64009050739f9c87853a82.jpg",
     "https://img.jakpost.net/c/2019/06/25/2019_06_25_75103_1561445774._large.jpg", "https://i.redd.it/4m2ypc8v0p221.jpg", "https://sf.ezoiccdn.com/ezoimgfmt/meowlogy.com/wp-content/uploads/2017/04/Cute-animals-66.jpg?ezimgfmt=rs:392x581/rscb2/ng:webp/ngcb2",
@@ -35,7 +33,6 @@ const emojy = [`<svg id="img1" xmlns="http://www.w3.org/2000/svg" width="16" hei
 let favorite = [];
 let username_arr = [];
 let password_arr = [];
-let bool = true;
 
 ///////////////////////////////////////////////////////////////////
 const lightbox = $("<div id='lightbox'></div>")
@@ -87,11 +84,7 @@ const rander = () => {
         'background-color': 'white',
         'border-radius': '20px'
     });
-    all.on("click", function () {
-        $(this).addClass("act")
-    })
-
-
+   
     all.on("mouseover", function () {
         $(this).addClass("button")
     })
@@ -148,9 +141,11 @@ const rander = () => {
         const new_button = $('<button> +</button>')
         new_button.appendTo(div_0)
         new_button.css({
+            'background-color': 'rgb(6, 49, 20)',
+            'color': 'white',
             'position': 'relative',
             'top': '220px',
-            'font-size': "60px",
+            'font-size': "50px",
             'border-radius': '20px ',
             'height': '75px',
             'width': '300px',
@@ -300,11 +295,8 @@ const rander = () => {
             })
 
             add_emojy_4.on("click", function () {
-
-
             })
         }
-
     }
 
     flowers.on('click', render_flowers);
@@ -327,9 +319,11 @@ const rander = () => {
         const new_button = $('<button> +</button>')
         new_button.appendTo(div)
         new_button.css({
+            'background-color': 'rgb(6, 49, 20)',
+            'color': 'white',
             'position': 'relative',
             'top': '220px',
-            'font-size': "60px",
+            'font-size': "50px",
             'border-radius': '20px ',
             'height': '75px',
             'width': '300px',
@@ -381,11 +375,7 @@ const rander = () => {
                 if (e.target !== e.currentTarget) return
                 lightbox[0].classList.remove('active')
             })
-
-
             ////////////////////////////////////////////////////////
-
-
             const add_emojy_1 = $(emojy[0]);
             add_emojy_1.appendTo(div_3)
             add_emojy_1.css({
@@ -451,18 +441,13 @@ const rander = () => {
             })
 
             add_emojy_3.on("click", function () {
-
-
                 if (favorite.indexOf(animals_arr[i]) === -1) {
                     favorite.push(animals_arr[i]);
                     localStorage.setItem("list_data_key", JSON.stringify(favorite));
                     add_emojy_3.unbind('click')
 
                 }
-
-
             })
-
 
             const add_emojy_4 = $(emojy[3]);
             add_emojy_4.appendTo(div_3)
@@ -484,11 +469,8 @@ const rander = () => {
 
             add_emojy_4.on("click", function () {
 
-
             })
-
         }
-
     }
 
     animals.on('click', render_animals);
@@ -511,9 +493,11 @@ const rander = () => {
         const new_button = $('<button> +</button>')
         new_button.appendTo(div)
         new_button.css({
+            'background-color': 'rgb(6, 49, 20)',
+            'color': 'white',
             'position': 'relative',
             'top': '220px',
-            'font-size': "60px",
+            'font-size': "50px",
             'border-radius': '20px ',
             'height': '75px',
             'width': '300px',
@@ -566,8 +550,6 @@ const rander = () => {
                 if (e.target !== e.currentTarget) return
                 lightbox[0].classList.remove('active')
             })
-
-
             //////////////////////////////////////////////
 
             const add_emojy_1 = $(emojy[0]);
@@ -661,15 +643,11 @@ const rander = () => {
             })
 
             add_emojy_4.on("click", function () {
-
-
             })
-
         }
-
     }
-    greenLand.on('click', render_greenLand);
 
+    greenLand.on('click', render_greenLand);
 
     const render_all = () => {
         const all_arr = flowers_arr.concat(animals_arr).concat(green_arr);
@@ -698,10 +676,8 @@ const rander = () => {
         'grid-template-columns': '300px 300px 300px',
         'gap': '100px',
         'justify-content': 'start',
-        //'margin-left': "50px",
     })
 }
-
 
 const favoritFunction = () => {
     $('#startLogin').html('')
@@ -739,12 +715,7 @@ const favoritFunction = () => {
             $(this).removeClass("change")
         })
     }
-
 }
-
-
-//rander();
-//$("#home").on('click', rander);
 //////////////////////////////////////////////////
 $("#login").on('click', () => {
     $('#startLogin').html('')
@@ -768,7 +739,6 @@ $("#login").on('click', () => {
     const password = $('<input type="password">')
     password.appendTo(div_c2);
 
-
     div.css({
         "display": "grid",
         'gap': '20px',
@@ -783,14 +753,13 @@ $("#login").on('click', () => {
         'grid-template-columns': '100px 200px',
         'gap': '20px',
         'justify-content': 'center',
-       
     });
 
     div_c2.css({
         "display": "grid",
         'grid-template-columns': '100px 200px ',
         'gap': '20px',
-        'justify-content': 'center',  
+        'justify-content': 'center',
     });
     div_c3.css({
         "display": "grid",
@@ -858,7 +827,7 @@ $("#login").on('click', () => {
             }
             rander();
         }
-        
+
     })
 
     const backButton = $('<button> <a href="PhotoGallrey.html">Back to Login </a></button>')
@@ -878,7 +847,7 @@ $("#login").on('click', () => {
         'position': 'relative',
         'left': '130px',
     })
-   
+
 })
 
 
@@ -898,12 +867,9 @@ const test = () => {
             rander();
 
         }
-
-
     }
     $("#home").on('click', rander);
     $("#favorit").on('click', favoritFunction);
-
 }
 
 
