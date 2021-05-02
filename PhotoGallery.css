@@ -103,6 +103,7 @@ left: 50px;
  }
  
  h5{
+     
     color: rgb(6, 49, 20);
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -145,13 +146,13 @@ left: 50px;
  
 
 .change{
-    height:320px !important;
-    width: 320px !important;   
+    height:250px !important;
+    width: 250px !important;   
 }
 
 .change_1{
-    height:40px !important;
-    width: 40px !important;   
+    height:25px !important;
+    width: 25px !important;   
     border: 2px solid black !important;
 }
 

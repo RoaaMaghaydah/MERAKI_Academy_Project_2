@@ -7,8 +7,7 @@ $('#theme').on("click", () => {
 })
 ////////////////////////////////////////////////////////////////////
 const flowers_arr = ["https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg", "http://www.photon-echoes.com/images/nature/flowers/flower1.JPG",
-    "https://empire-s3-production.bobvila.com/slides/26814/original/ganzia.jpg?1532362531", "https://sciencenotes.org/wp-content/uploads/2020/02/1280px-Glowing_flowers-1024x710.jpg", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-182880589-1493334765.jpg",
-    "https://i0.wp.com/ae04.alicdn.com/kf/H7c41fbf0454a4aa2bda33efae67bfacbH.png_300x300.jpg"];
+    "https://empire-s3-production.bobvila.com/slides/26814/original/ganzia.jpg?1532362531", "https://sciencenotes.org/wp-content/uploads/2020/02/1280px-Glowing_flowers-1024x710.jpg", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-182880589-1493334765.jpg"];
 
 const animals_arr = ["https://i.pinimg.com/originals/e3/32/3f/e3323fc80a203239e2a28ae23f83260a.jpg", "https://i.pinimg.com/originals/a4/0c/c0/a40cc0f58f64009050739f9c87853a82.jpg",
     "https://img.jakpost.net/c/2019/06/25/2019_06_25_75103_1561445774._large.jpg", "https://i.redd.it/4m2ypc8v0p221.jpg", "https://sf.ezoiccdn.com/ezoimgfmt/meowlogy.com/wp-content/uploads/2017/04/Cute-animals-66.jpg?ezimgfmt=rs:392x581/rscb2/ng:webp/ngcb2",
@@ -46,9 +45,9 @@ gallery.appendTo(body1);
 gallery.css({
     "display": "grid",
     'grid-template-columns': '100px 100px 100px 100px',
-    'gap': '50px',
+    'gap': '70px',
     'justify-content': 'start',
-    'margin-left': "50px",
+    'margin-left': "100px",
 });
 
 
@@ -66,28 +65,56 @@ const rander = () => {
 
     all.css({
         'position': 'relative',
-        'top': '170px',
-        'background-color': 'white',
-        'border-radius': '20px'
+        'top': '85px',
+        'background-color': 'cornsilk',
+        'border-radius': '20px',
+        'width': '130px',
+        'height': '36px',
+        'font-size': '20px',
+         'font-family': `Times New Roman', Times, serif !important;`,
+         'font-weight': 'bold',
+         'font-style': 'italic',
+         'color': 'rgb(6, 49, 20)',
     });
 
     flowers.css({
         'position': 'relative',
-        'top': '170px',
-        'background-color': 'white',
-        'border-radius': '20px'
+        'top': '85px',
+        'background-color': 'cornsilk',
+        'border-radius': '20px',
+        'width': '130px',
+        'height': '36px',
+        'font-size': '20px',
+            'font-family': `Times New Roman', Times, serif !important;`,
+            'font-weight': 'bold',
+            'font-style': 'italic',
+            'color': 'rgb(6, 49, 20)',
     });
     animals.css({
         'position': 'relative',
-        'top': '170px',
-        'background-color': 'white',
-        'border-radius': '20px'
+        'top': '85px',
+        'background-color': 'cornsilk',
+        'border-radius': '20px',
+        'width': '130px',
+        'height': '36px',
+        'font-size': '20px',
+            'font-family': `Times New Roman', Times, serif !important;`,
+            'font-weight': 'bold',
+            'font-style': 'italic',
+            'color': 'rgb(6, 49, 20)',
     });
     greenLand.css({
         'position': 'relative',
-        'top': '170px',
-        'background-color': 'white',
-        'border-radius': '20px'
+        'top': '85px',
+        'background-color': 'cornsilk',
+        'border-radius': '20px',
+        'width': '130px',
+       'height': '36px',
+       'font-size': '20px',
+        'font-family': `Times New Roman', Times, serif !important;`,
+        'font-weight': 'bold',
+        'font-style': 'italic',
+        'color': 'rgb(6, 49, 20)',
     });
 
     all.on("mouseover", function () {
@@ -137,11 +164,11 @@ const rander = () => {
         input.appendTo(div_0);
         input.css({
             'position': 'relative',
-            'top': '220px',
+            'top': '70px',
             'font-size': "15px",
             'border-radius': '20px ',
-            'height': '230px',
-            'width': '300px',
+            'height': '150px',
+            'width': '200px',
         })
         const new_button = $('<button> +</button>')
         new_button.appendTo(div_0)
@@ -149,11 +176,11 @@ const rander = () => {
             'background-color': 'rgb(6, 49, 20)',
             'color': 'white',
             'position': 'relative',
-            'top': '220px',
-            'font-size': "50px",
+            'top': '70px',
+            'font-size': "20px",
             'border-radius': '20px ',
-            'height': '75px',
-            'width': '300px',
+            'height': '50px',
+            'width': '200px',
         })
         new_button.on('click', () => {
             flowers_arr.push(input.val());
@@ -169,11 +196,11 @@ const rander = () => {
             const div_3 = $('<div></div>');
             div_3.appendTo(div_1);
 
-            const add = $(`<img src=${flowers_arr[i]} style="height: 300px; width: 300px;">`);
+            const add = $(`<img src=${flowers_arr[i]} style="height: 200px; width: 200px;">`);
             add.appendTo(div_2)
             add.css({
                 'position': 'relative',
-                'top': '220px',
+                'top': '70px',
                 'border-radius': '20px ',
 
             })
@@ -212,10 +239,10 @@ const rander = () => {
             add_emojy_1.appendTo(div_3)
             add_emojy_1.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border': '2px black ',
             })
             add_emojy_1.on("mouseover", function () {
@@ -237,10 +264,10 @@ const rander = () => {
             add_emojy_2.appendTo(div_3)
             add_emojy_2.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border': '2px black ',
             })
             add_emojy_2.on("mouseover", function () {
@@ -258,10 +285,10 @@ const rander = () => {
             add_emojy_3.appendTo(div_3)
             add_emojy_3.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border': '2px black ',
                 //'cursor': 'block',
             })
@@ -285,10 +312,10 @@ const rander = () => {
             add_emojy_4.appendTo(div_3)
             add_emojy_4.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border': '2px black ',
             })
             add_emojy_4.on("mouseover", function () {
@@ -315,11 +342,11 @@ const rander = () => {
         input.appendTo(div);
         input.css({
             'position': 'relative',
-            'top': '220px',
+            'top': '70px',
             'font-size': "15px",
             'border-radius': '20px ',
-            'height': '230px',
-            'width': '300px',
+            'height': '150px',
+            'width': '200px',
         })
         const new_button = $('<button> +</button>')
         new_button.appendTo(div)
@@ -327,11 +354,11 @@ const rander = () => {
             'background-color': 'rgb(6, 49, 20)',
             'color': 'white',
             'position': 'relative',
-            'top': '220px',
-            'font-size': "50px",
+            'top': '70px',
+            'font-size': "20px",
             'border-radius': '20px ',
-            'height': '75px',
-            'width': '300px',
+            'height': '50px',
+            'width': '200px',
         })
         new_button.on('click', () => {
             animals_arr.push(input.val());
@@ -345,11 +372,11 @@ const rander = () => {
             div_2.appendTo(div_1);
             const div_3 = $('<div></div>');
             div_3.appendTo(div_1);
-            const add = $(`<img src=${animals_arr[i]} style="height: 300px; width: 300px;">`);
+            const add = $(`<img src=${animals_arr[i]} style="height: 200px; width: 200px;">`);
             add.appendTo(div_2)
             add.css({
                 'position': 'relative',
-                'top': '220px',
+                'top': '70px',
                 'border-radius': '20px ',
             })
             add.on("mouseover", function () {
@@ -385,10 +412,10 @@ const rander = () => {
             add_emojy_1.appendTo(div_3)
             add_emojy_1.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border': '2px black ',
             })
             add_emojy_1.on("mouseover", function () {
@@ -410,10 +437,10 @@ const rander = () => {
             add_emojy_2.appendTo(div_3)
             add_emojy_2.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border': '2px black ',
             })
             add_emojy_2.on("mouseover", function () {
@@ -431,10 +458,10 @@ const rander = () => {
             add_emojy_3.appendTo(div_3)
             add_emojy_3.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border': '2px black ',
             })
             add_emojy_3.on("mouseover", function () {
@@ -458,10 +485,10 @@ const rander = () => {
             add_emojy_4.appendTo(div_3)
             add_emojy_4.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border': '2px black ',
             })
             add_emojy_4.on("mouseover", function () {
@@ -489,11 +516,11 @@ const rander = () => {
         input.appendTo(div);
         input.css({
             'position': 'relative',
-            'top': '220px',
+            'top': '70px',
             'font-size': "15px",
             'border-radius': '20px ',
-            'height': '230px',
-            'width': '300px',
+            'height': '150px',
+            'width': '200px',
         })
         const new_button = $('<button> +</button>')
         new_button.appendTo(div)
@@ -501,11 +528,11 @@ const rander = () => {
             'background-color': 'rgb(6, 49, 20)',
             'color': 'white',
             'position': 'relative',
-            'top': '220px',
-            'font-size': "50px",
+            'top': '70px',
+            'font-size': "20px",
             'border-radius': '20px ',
-            'height': '75px',
-            'width': '300px',
+            'height': '50px',
+            'width': '200px',
         })
         new_button.on('click', () => {
             green_arr.push(input.val());
@@ -518,11 +545,11 @@ const rander = () => {
             div_2.appendTo(div_1);
             const div_3 = $('<div></div>');
             div_3.appendTo(div_1);
-            const add = $(`<img src=${green_arr[i]} style="height: 300px; width: 300px;">`);
+            const add = $(`<img src=${green_arr[i]} style="height: 200px; width: 200px;">`);
             add.appendTo(div_2)
             add.css({
                 'position': 'relative',
-                'top': '220px',
+                'top': '70px',
                 'border-radius': '20px ',
             })
             add.on("mouseover", function () {
@@ -561,10 +588,10 @@ const rander = () => {
             add_emojy_1.appendTo(div_3)
             add_emojy_1.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border': '2px black ',
             })
             add_emojy_1.on("mouseover", function () {
@@ -586,10 +613,10 @@ const rander = () => {
             add_emojy_2.appendTo(div_3)
             add_emojy_2.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border': '2px black ',
             })
             add_emojy_2.on("mouseover", function () {
@@ -607,10 +634,10 @@ const rander = () => {
             add_emojy_3.appendTo(div_3)
             add_emojy_3.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border': '2px black ',
             })
             add_emojy_3.on("mouseover", function () {
@@ -633,10 +660,10 @@ const rander = () => {
             add_emojy_4.appendTo(div_3)
             add_emojy_4.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border': '2px black ',
             })
            
@@ -644,30 +671,30 @@ const rander = () => {
            
             facebook.css({
                 'position': 'relative',
-                'top': '220px',
-                "margin": '20px',
-                'height': '30px',
-                'width': '30px',
+                'top': '70px',
+                "margin": '15px',
+                'height': '20px',
+                'width': '20px',
                 'border-radius': '20px ',
                 'border': '2px black ',})
                 const twitter=$(`<img src=${share[1]} style="height: 500px; width: 500px;"></img>`)
                
                 twitter.css({
                     'position': 'relative',
-                    'top': '220px',
-                    "margin": '20px',
-                    'height': '30px',
-                    'width': '30px',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '20px',
+                    'width': '20px',
                     'border-radius': '20px ',
                     'border': '2px black ',})
                     const instagram=$(`<img src=${share[2]} style="height: 500px; width: 500px;"></img>`)
                    
                     instagram.css({
                         'position': 'relative',
-                        'top': '220px',
-                        "margin": '20px',
-                        'height': '30px',
-                        'width': '30px',
+                        'top': '70px',
+                        "margin": '15px',
+                        'height': '20px',
+                        'width': '20px',
                         'border-radius': '20px ',
                         'border': '2px black ',})
                     
@@ -675,10 +702,10 @@ const rander = () => {
                       
                         telegram.css({
                             'position': 'relative',
-                            'top': '220px',
-                            "margin": '20px',
-                            'height': '30px',
-                            'width': '30px',
+                            'top': '70px',
+                            "margin": '15px',
+                            'height': '20px',
+                            'width': '20px',
                             'border-radius': '20px ',
                             'border': '2px black ',})
     
@@ -710,11 +737,11 @@ const rander = () => {
         const all_arr = flowers_arr.concat(animals_arr).concat(green_arr);
         $("#show").html("");
         for (let i = 0; i < all_arr.length; i++) {
-            const add = $(`<img src=${all_arr[i]} style="height: 300px; width: 300px;">`);
+            const add = $(`<img src=${all_arr[i]} style="height: 250px; width: 250px;">`);
             add.appendTo(gallery_1)
             add.css({
                 'position': 'relative',
-                'top': '220px',
+                 'top': '70px',
                 'border-radius': '20px ',
             })
             add.on("mouseover", function () {
@@ -731,8 +758,9 @@ const rander = () => {
     gallery_1.css({
         "display": "grid",
         'grid-template-columns': '300px 300px 300px',
-        'gap': '100px',
+        'gap': '70px',
         'justify-content': 'start',
+        
     })
 }
 
@@ -752,7 +780,7 @@ const favoritFunction = () => {
         'grid-template-columns': '300px 300px 300px',
         'gap': '100px',
         'justify-content': 'start',
-        'margin-left': "50px",
+        //'margin-left': "50px",
     })
 
 
@@ -760,7 +788,7 @@ const favoritFunction = () => {
     for (let i = 0; i < favorite.length; i++) {
         const div_22 = $('<div id="f"></div>')
         div_22.appendTo(div_11)
-        const add = $(`<img src=${favorite[i]} style="height: 300px; width: 300px;">`);
+        const add = $(`<img src=${favorite[i]} style="height: 250px; width: 250px;">`);
         const removeFavorite = $('<button>remove</button>')
         add.appendTo(div_22)
         removeFavorite.appendTo(div_22)
@@ -768,7 +796,7 @@ const favoritFunction = () => {
             "display": "grid",
             'gap': '20px',
             'justify-content': 'start',
-            'margin-left': "50px",
+            'margin-left': "20px",
 
         })
         removeFavorite.css({
@@ -782,13 +810,13 @@ const favoritFunction = () => {
             'height': '40px',
             'width': '120px',
             'position': 'relative',
-            'top': '220px',
+            'top': '90px',
 
         })
 
         add.css({
             'position': 'relative',
-            'top': '220px',
+            'top': '90px',
             'border-radius': '20px ',
         })
         add.on("mouseover", function () {
@@ -836,7 +864,7 @@ $("#login").on('click', () => {
         'justify-content': 'start',
         'margin-left': "20px",
         'position': 'relative',
-        'top': '170px',
+        'top': '100px',
     });
 
     div_c1.css({
