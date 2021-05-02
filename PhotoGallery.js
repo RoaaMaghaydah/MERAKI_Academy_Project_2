@@ -685,10 +685,9 @@ const favoritFunction = () => {
     let storedData = localStorage.getItem("list_data_key");
     if (storedData) {
         favorite = JSON.parse(storedData);
-
     }
+   const div_11 = $('<div id="f"></div>')
 
-    const div_11 = $('<div id="f"></div>')
     div_11.appendTo(gallery)
 
     div_11.css({
@@ -699,9 +698,37 @@ const favoritFunction = () => {
         'margin-left': "50px",
     })
 
+  
+
     for (let i = 0; i < favorite.length; i++) {
+        const div_22 = $('<div id="f"></div>')
+        div_22.appendTo(div_11)
         const add = $(`<img src=${favorite[i]} style="height: 300px; width: 300px;">`);
-        add.appendTo(div_11)
+        const removeFavorite=$('<button>remove</button>')
+        add.appendTo(div_22)
+        removeFavorite.appendTo(div_22)
+        div_22.css({
+            "display": "grid",
+            'gap': '20px',
+            'justify-content': 'start',
+            'margin-left': "50px",
+           
+        })
+        removeFavorite.css({
+            'background-color': 'rgb(6, 49, 20)',
+            'color': 'white',
+            'font-size': '15px',
+            'font-family': `Times New Roman', Times, serif;`,
+            'font-weight': 'bold',
+            'font-style': 'italic',
+            'border-radius': '40px',
+            'height': '40px',
+            'width': '120px',
+            'position': 'relative',
+            'top': '220px',
+
+        })
+
         add.css({
             'position': 'relative',
             'top': '220px',
@@ -714,6 +741,13 @@ const favoritFunction = () => {
         add.on("mouseout", function () {
             $(this).removeClass("change")
         })
+  
+        removeFavorite.on('click',function(){
+            console.log("fff",favorite,i)
+            favorite.splice(i,1) ;  
+            localStorage.setItem("list_data_key", JSON.stringify(favorite));
+            favoritFunction()           
+            ;})
     }
 }
 //////////////////////////////////////////////////

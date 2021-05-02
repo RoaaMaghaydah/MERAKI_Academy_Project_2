@@ -37,11 +37,13 @@ justify-content:end;
 justify-items: center;
 font-size: 20px;
 margin: 5px;
+border-radius: 20px;
 background-color: rgb(6, 49, 20);
 border: 2px solid white;
 /*color: white;*/
 
 };
+
 
 
 .perant{
