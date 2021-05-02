@@ -685,18 +685,20 @@ const rander = () => {
                             add_emojy_4.on("mouseover", function () {
                                 $(this).addClass("change_1")
                                 
+                                
                              })
                 
                             add_emojy_4.on("mouseout", function () {
                                 $(this).removeClass("change_1")
+                               
                             
                             })
 
-                 add_emojy_4.on("click", function () {
-                    telegram.appendTo(div_3);
-                    instagram.appendTo(div_3);
-                    facebook.appendTo(div_3);
-                    twitter.appendTo(div_3);        
+                   add_emojy_4.on("click", function () {
+                                telegram.appendTo(div_3);
+                                instagram.appendTo(div_3);
+                                facebook.appendTo(div_3);
+                                twitter.appendTo(div_3);    
                  })
 
                 }
@@ -797,7 +799,7 @@ const favoritFunction = () => {
             $(this).removeClass("change")
         })
 
-        removeFavorite.on('click', function () {
+         removeFavorite.on('click', function () {
             console.log("fff", favorite, i)
             favorite.splice(i, 1);
             localStorage.setItem("list_data_key", JSON.stringify(favorite));

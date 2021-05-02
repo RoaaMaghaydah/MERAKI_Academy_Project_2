@@ -1,7 +1,7 @@
 
 body{
     background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZsYXQlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
-    background-size:1400px 350px;
+    background-size:cover;
     background-repeat: no-repeat;    
 }
 
@@ -67,6 +67,10 @@ left: 50px;
  font-weight: bold;
  font-style: italic;
  text-shadow:  0 0 10px white,0 0 5px rgb(0, 173, 52);
+ border-bottom:5px solid rgb(6, 49, 20);
+ width: fit-content;
+ padding: 10px;
+ margin-left:50px ;
 }
 
 #theme{
@@ -85,10 +89,10 @@ left: 50px;
     justify-content:start;
     justify-items: start;
     font-size: 20px;
-    margin-left: 50px;
+    margin-left: 100px;
     position:absolute;
-    top: 360px;
-    
+    top: 260px;
+
  }
 
  h4{
@@ -112,7 +116,7 @@ left: 50px;
      font-family: 'Times New Roman', Times, serif;
      font-weight: bold;
      font-style: italic;
-     width: 200px;
+     width: 300px;
      height: 36px;
      
  }
@@ -122,7 +126,7 @@ left: 50px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     font-style: italic;
-    width: 200px;
+    width: 300px;
     height: 36px;
 }
 
@@ -175,3 +179,28 @@ display: none;
     align-items: center;
 }
 
+
+@media only screen and (max-width: 530px) {
+    body{
+
+        background-size:470px 350px;
+        background-repeat: no-repeat;    
+    }
+    
+    .p{       
+        font-size: 50px;
+     }  
+    
+       #startLogin{
+        display: grid;
+        grid-template-rows: 20px 20px 20px 20px;
+        gap: 15px;
+        justify-content:center;
+        justify-items:start;
+        font-size: 20px;
+        margin-left: 50px;
+        position:absolute;
+        top: 360px;
+        
+     }
+  }
