@@ -30,6 +30,11 @@ const emojy = [`<svg id="img1" xmlns="http://www.w3.org/2000/svg" width="16" hei
 <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
 </svg>`];
 
+const share=['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/1200px-Facebook_icon.svg.png',
+'https://log-logo.com/wp-content/uploads/2019/09/t3-1024x707.jpg',
+'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png',
+'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/1024px-Telegram_2019_Logo.svg.png']
+
 let favorite = [];
 let username_arr = [];
 let password_arr = [];
@@ -84,7 +89,7 @@ const rander = () => {
         'background-color': 'white',
         'border-radius': '20px'
     });
-   
+
     all.on("mouseover", function () {
         $(this).addClass("button")
     })
@@ -634,17 +639,67 @@ const rander = () => {
                 'width': '30px',
                 'border': '2px black ',
             })
-            add_emojy_4.on("mouseover", function () {
-                $(this).addClass("change_1")
-            })
+           
+            const facebook=$(`<img src=${share[0]} style="height: 500px; width: 500px;"></img>`)
+           
+            facebook.css({
+                'position': 'relative',
+                'top': '220px',
+                "margin": '20px',
+                'height': '30px',
+                'width': '30px',
+                'border-radius': '20px ',
+                'border': '2px black ',})
+                const twitter=$(`<img src=${share[1]} style="height: 500px; width: 500px;"></img>`)
+               
+                twitter.css({
+                    'position': 'relative',
+                    'top': '220px',
+                    "margin": '20px',
+                    'height': '30px',
+                    'width': '30px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',})
+                    const instagram=$(`<img src=${share[2]} style="height: 500px; width: 500px;"></img>`)
+                   
+                    instagram.css({
+                        'position': 'relative',
+                        'top': '220px',
+                        "margin": '20px',
+                        'height': '30px',
+                        'width': '30px',
+                        'border-radius': '20px ',
+                        'border': '2px black ',})
+                    
+                        const telegram=$(`<img src=${share[3]} style="height: 500px; width: 500px;"></img>`)
+                      
+                        telegram.css({
+                            'position': 'relative',
+                            'top': '220px',
+                            "margin": '20px',
+                            'height': '30px',
+                            'width': '30px',
+                            'border-radius': '20px ',
+                            'border': '2px black ',})
+    
+                            add_emojy_4.on("mouseover", function () {
+                                $(this).addClass("change_1")
+                                
+                             })
+                
+                            add_emojy_4.on("mouseout", function () {
+                                $(this).removeClass("change_1")
+                            
+                            })
 
-            add_emojy_4.on("mouseout", function () {
-                $(this).removeClass("change_1")
-            })
+                 add_emojy_4.on("click", function () {
+                    telegram.appendTo(div_3);
+                    instagram.appendTo(div_3);
+                    facebook.appendTo(div_3);
+                    twitter.appendTo(div_3);        
+                 })
 
-            add_emojy_4.on("click", function () {
-            })
-        }
+                }
     }
 
     greenLand.on('click', render_greenLand);
@@ -686,7 +741,7 @@ const favoritFunction = () => {
     if (storedData) {
         favorite = JSON.parse(storedData);
     }
-   const div_11 = $('<div id="f"></div>')
+    const div_11 = $('<div id="f"></div>')
 
     div_11.appendTo(gallery)
 
@@ -698,13 +753,13 @@ const favoritFunction = () => {
         'margin-left': "50px",
     })
 
-  
+
 
     for (let i = 0; i < favorite.length; i++) {
         const div_22 = $('<div id="f"></div>')
         div_22.appendTo(div_11)
         const add = $(`<img src=${favorite[i]} style="height: 300px; width: 300px;">`);
-        const removeFavorite=$('<button>remove</button>')
+        const removeFavorite = $('<button>remove</button>')
         add.appendTo(div_22)
         removeFavorite.appendTo(div_22)
         div_22.css({
@@ -712,7 +767,7 @@ const favoritFunction = () => {
             'gap': '20px',
             'justify-content': 'start',
             'margin-left': "50px",
-           
+
         })
         removeFavorite.css({
             'background-color': 'rgb(6, 49, 20)',
@@ -741,13 +796,13 @@ const favoritFunction = () => {
         add.on("mouseout", function () {
             $(this).removeClass("change")
         })
-  
-        removeFavorite.on('click',function(){
-            console.log("fff",favorite,i)
-            favorite.splice(i,1) ;  
+
+        removeFavorite.on('click', function () {
+            console.log("fff", favorite, i)
+            favorite.splice(i, 1);
             localStorage.setItem("list_data_key", JSON.stringify(favorite));
-            favoritFunction()           
-            ;})
+            favoritFunction() ;
+        })
     }
 }
 //////////////////////////////////////////////////
