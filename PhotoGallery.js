@@ -35,10 +35,8 @@ const share = ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebo
 let favorite = [];
 let username_arr = [];
 let password_arr = [];
-
 ///////////////////////////////////////////////////////////////////
-const lightbox = $("<div id='lightbox'></div>")
-const lightbox1 = $("<div id='lightbox1'></div>")
+const lightbox = $("<div id='lightbox'></div>");
 const gallery = $("<div class:'gallery_button'>  </div>");
 gallery.appendTo(body1);
 gallery.css({
@@ -48,7 +46,6 @@ gallery.css({
     'justify-content': 'start',
     'margin-left': "100px",
 });
-
 
 const rander = () => {
     $('#startLogin').html('')
@@ -151,9 +148,6 @@ const rander = () => {
     const gallery_1 = $("<div id='show'>  </div>");
     gallery_1.appendTo(gallery);
 
-
-
-
     const render_flowers = () => {
         $("#show").html("");
 
@@ -166,8 +160,9 @@ const rander = () => {
             'top': '70px',
             'font-size': "15px",
             'border-radius': '20px ',
-            'height': '150px',
-            'width': '200px',
+            'height': '165px',
+            'width': '230px',
+            'background-color': 'cornsilk',
         })
         const new_button = $('<button> +</button>')
         new_button.appendTo(div_0)
@@ -178,13 +173,14 @@ const rander = () => {
             'top': '70px',
             'font-size': "20px",
             'border-radius': '20px ',
-            'height': '50px',
-            'width': '200px',
+            'height': '65px',
+            'width': '230px',
         })
         new_button.on('click', () => {
-            flowers_arr.push(input.val());
-            render_flowers();
-
+            if (input.val() !== '') {
+                flowers_arr.push(input.val());
+                render_flowers();
+            }
         })
 
         for (let i = 0; i < flowers_arr.length; i++) {
@@ -198,12 +194,13 @@ const rander = () => {
             div_4.appendTo(div_1);
 
 
-            const add = $(`<img src=${flowers_arr[i]} style="height: 200px; width: 200px;">`);
+            const add = $(`<img src=${flowers_arr[i]} style="height: 230px; width: 230px;">`);
             add.appendTo(div_2)
             add.css({
                 'position': 'relative',
                 'top': '70px',
                 'border-radius': '20px ',
+                'border': '3px solid black',
 
             })
             add.on("mouseover", function () {
@@ -330,100 +327,100 @@ const rander = () => {
 
             body1.append(lightbox);
             add_emojy_4.on("click", function () {
-             lightbox[0].classList.add('active')
-             const facebook = $(`<img src=${share[0]} style="height: 500px; width: 500px;"></img>`)
-            facebook.css({
-                'position': 'relative',
-                'top': '70px',
-                "margin": '15px',
-                'height': '60px',
-                'width': '60px',
-                'border-radius': '20px ',
-                'border': '2px black ',
-            })
-            const twitter = $(`<img src=${share[1]} style="height: 500px; width: 500px;"></img>`)
-
-            twitter.css({
-                'position': 'relative',
-                'top': '70px',
-                "margin": '15px',
-                'height': '50px',
-                'width': '50px',
-                'border-radius': '20px ',
-                'border': '2px black ',
-            })
-            const instagram = $(`<img src=${share[2]} style="height: 500px; width: 500px;"></img>`)
-
-            instagram.css({
-                'position': 'relative',
-                'top': '70px',
-                "margin": '15px',
-                'height': '60px',
-                'width': '60px',
-                'border-radius': '20px ',
-                'border': '2px black ',
-            })
-
-            const telegram = $(`<img src=${share[3]} style="height: 500px; width: 500px;"></img>`)
-
-            telegram.css({
-                'position': 'relative',
-                'top': '70px',
-                "margin": '15px',
-                'height': '60px',
-                'width': '60px',
-                'border-radius': '20px ',
-                'border': '2px black ',
-            })
-
-            facebook.on("mouseover", function () {
-                $(this).addClass("change_2")
-            })
-
-            facebook.on("mouseout", function () {
-                $(this).removeClass("change_2")
-
-            })
-            twitter.on("mouseover", function () {
-                $(this).addClass("change_2")
-            })
-
-            twitter.on("mouseout", function () {
-                $(this).removeClass("change_2")
-
-            })
-            instagram.on("mouseover", function () {
-                $(this).addClass("change_2")
-            })
-
-            instagram.on("mouseout", function () {
-                $(this).removeClass("change_2")
-
-            })
-            telegram.on("mouseover", function () {
-                $(this).addClass("change_2")
-            })
-
-            telegram.on("mouseout", function () {
-                $(this).removeClass("change_2")
-
-            })
-
-
-                    while (lightbox[0].firstChild) {
-                        lightbox[0].removeChild(lightbox[0].firstChild)
-                    }
-                    lightbox.append(facebook)
-                    lightbox.append(twitter)
-                    lightbox.append(instagram);
-                    lightbox.append(telegram);
-                   
+                lightbox[0].classList.add('active')
+                const facebook = $(`<img src=${share[0]} style="height: 500px; width: 500px;"></img>`)
+                facebook.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '60px',
+                    'width': '60px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
                 })
-    
-                lightbox.on('click', e => {
-                    if (e.target !== e.currentTarget) return
-                    lightbox[0].classList.remove('active')
-                }) 
+                const twitter = $(`<img src=${share[1]} style="height: 500px; width: 500px;"></img>`)
+
+                twitter.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '50px',
+                    'width': '50px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                })
+                const instagram = $(`<img src=${share[2]} style="height: 500px; width: 500px;"></img>`)
+
+                instagram.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '60px',
+                    'width': '60px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                })
+
+                const telegram = $(`<img src=${share[3]} style="height: 500px; width: 500px;"></img>`)
+
+                telegram.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '60px',
+                    'width': '60px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                })
+
+                facebook.on("mouseover", function () {
+                    $(this).addClass("change_2")
+                })
+
+                facebook.on("mouseout", function () {
+                    $(this).removeClass("change_2")
+
+                })
+                twitter.on("mouseover", function () {
+                    $(this).addClass("change_2")
+                })
+
+                twitter.on("mouseout", function () {
+                    $(this).removeClass("change_2")
+
+                })
+                instagram.on("mouseover", function () {
+                    $(this).addClass("change_2")
+                })
+
+                instagram.on("mouseout", function () {
+                    $(this).removeClass("change_2")
+
+                })
+                telegram.on("mouseover", function () {
+                    $(this).addClass("change_2")
+                })
+
+                telegram.on("mouseout", function () {
+                    $(this).removeClass("change_2")
+
+                })
+
+
+                while (lightbox[0].firstChild) {
+                    lightbox[0].removeChild(lightbox[0].firstChild)
+                }
+                lightbox.append(facebook)
+                lightbox.append(twitter)
+                lightbox.append(instagram);
+                lightbox.append(telegram);
+
+            })
+
+            lightbox.on('click', e => {
+                if (e.target !== e.currentTarget) return
+                lightbox[0].classList.remove('active')
+            })
         }
     }
 
@@ -441,8 +438,9 @@ const rander = () => {
             'top': '70px',
             'font-size': "15px",
             'border-radius': '20px ',
-            'height': '150px',
-            'width': '200px',
+            'height': '165px',
+            'width': '230px',
+            'background-color': 'cornsilk',
         })
         const new_button = $('<button> +</button>')
         new_button.appendTo(div)
@@ -453,12 +451,14 @@ const rander = () => {
             'top': '70px',
             'font-size': "20px",
             'border-radius': '20px ',
-            'height': '50px',
-            'width': '200px',
+            'height': '65px',
+            'width': '230px',
         })
         new_button.on('click', () => {
-            animals_arr.push(input.val());
-            render_animals();
+            if (input.val() !== '') {
+                animals_arr.push(input.val());
+                render_animals();
+            }
         })
 
         for (let i = 0; i < animals_arr.length; i++) {
@@ -468,12 +468,14 @@ const rander = () => {
             div_2.appendTo(div_1);
             const div_3 = $('<div></div>');
             div_3.appendTo(div_1);
-            const add = $(`<img src=${animals_arr[i]} style="height: 200px; width: 200px;">`);
+            const add = $(`<img src=${animals_arr[i]} style="height: 230px; width: 230px;">`);
             add.appendTo(div_2)
             add.css({
                 'position': 'relative',
                 'top': '70px',
                 'border-radius': '20px ',
+                'border': '3px solid black',
+
             })
             add.on("mouseover", function () {
                 $(this).addClass("change")
@@ -596,100 +598,100 @@ const rander = () => {
             })
             body1.append(lightbox);
             add_emojy_4.on("click", function () {
-             lightbox[0].classList.add('active')
-             const facebook = $(`<img src=${share[0]} style="height: 500px; width: 500px;"></img>`)
-            facebook.css({
-                'position': 'relative',
-                'top': '70px',
-                "margin": '15px',
-                'height': '60px',
-                'width': '60px',
-                'border-radius': '20px ',
-                'border': '2px black ',
-            })
-            const twitter = $(`<img src=${share[1]} style="height: 500px; width: 500px;"></img>`)
-
-            twitter.css({
-                'position': 'relative',
-                'top': '70px',
-                "margin": '15px',
-                'height': '50px',
-                'width': '50px',
-                'border-radius': '20px ',
-                'border': '2px black ',
-            })
-            const instagram = $(`<img src=${share[2]} style="height: 500px; width: 500px;"></img>`)
-
-            instagram.css({
-                'position': 'relative',
-                'top': '70px',
-                "margin": '15px',
-                'height': '60px',
-                'width': '60px',
-                'border-radius': '20px ',
-                'border': '2px black ',
-            })
-
-            const telegram = $(`<img src=${share[3]} style="height: 500px; width: 500px;"></img>`)
-
-            telegram.css({
-                'position': 'relative',
-                'top': '70px',
-                "margin": '15px',
-                'height': '60px',
-                'width': '60px',
-                'border-radius': '20px ',
-                'border': '2px black ',
-            })
-
-            facebook.on("mouseover", function () {
-                $(this).addClass("change_2")
-            })
-
-            facebook.on("mouseout", function () {
-                $(this).removeClass("change_2")
-
-            })
-            twitter.on("mouseover", function () {
-                $(this).addClass("change_2")
-            })
-
-            twitter.on("mouseout", function () {
-                $(this).removeClass("change_2")
-
-            })
-            instagram.on("mouseover", function () {
-                $(this).addClass("change_2")
-            })
-
-            instagram.on("mouseout", function () {
-                $(this).removeClass("change_2")
-
-            })
-            telegram.on("mouseover", function () {
-                $(this).addClass("change_2")
-            })
-
-            telegram.on("mouseout", function () {
-                $(this).removeClass("change_2")
-
-            })
-
-
-                    while (lightbox[0].firstChild) {
-                        lightbox[0].removeChild(lightbox[0].firstChild)
-                    }
-                    lightbox.append(facebook)
-                    lightbox.append(twitter)
-                    lightbox.append(instagram);
-                    lightbox.append(telegram);
-                   
+                lightbox[0].classList.add('active')
+                const facebook = $(`<img src=${share[0]} style="height: 500px; width: 500px;"></img>`)
+                facebook.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '60px',
+                    'width': '60px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
                 })
-    
-                lightbox.on('click', e => {
-                    if (e.target !== e.currentTarget) return
-                    lightbox[0].classList.remove('active')
-                }) 
+                const twitter = $(`<img src=${share[1]} style="height: 500px; width: 500px;"></img>`)
+
+                twitter.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '50px',
+                    'width': '50px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                })
+                const instagram = $(`<img src=${share[2]} style="height: 500px; width: 500px;"></img>`)
+
+                instagram.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '60px',
+                    'width': '60px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                })
+
+                const telegram = $(`<img src=${share[3]} style="height: 500px; width: 500px;"></img>`)
+
+                telegram.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '60px',
+                    'width': '60px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                })
+
+                facebook.on("mouseover", function () {
+                    $(this).addClass("change_2")
+                })
+
+                facebook.on("mouseout", function () {
+                    $(this).removeClass("change_2")
+
+                })
+                twitter.on("mouseover", function () {
+                    $(this).addClass("change_2")
+                })
+
+                twitter.on("mouseout", function () {
+                    $(this).removeClass("change_2")
+
+                })
+                instagram.on("mouseover", function () {
+                    $(this).addClass("change_2")
+                })
+
+                instagram.on("mouseout", function () {
+                    $(this).removeClass("change_2")
+
+                })
+                telegram.on("mouseover", function () {
+                    $(this).addClass("change_2")
+                })
+
+                telegram.on("mouseout", function () {
+                    $(this).removeClass("change_2")
+
+                })
+
+
+                while (lightbox[0].firstChild) {
+                    lightbox[0].removeChild(lightbox[0].firstChild)
+                }
+                lightbox.append(facebook)
+                lightbox.append(twitter)
+                lightbox.append(instagram);
+                lightbox.append(telegram);
+
+            })
+
+            lightbox.on('click', e => {
+                if (e.target !== e.currentTarget) return
+                lightbox[0].classList.remove('active')
+            })
         }
     }
 
@@ -707,8 +709,9 @@ const rander = () => {
             'top': '70px',
             'font-size': "15px",
             'border-radius': '20px ',
-            'height': '150px',
-            'width': '200px',
+            'height': '165px',
+            'width': '230px',
+            'background-color': 'cornsilk',
         })
         const new_button = $('<button> +</button>')
         new_button.appendTo(div)
@@ -719,12 +722,14 @@ const rander = () => {
             'top': '70px',
             'font-size': "20px",
             'border-radius': '20px ',
-            'height': '50px',
-            'width': '200px',
+            'height': '65px',
+            'width': '230px',
         })
         new_button.on('click', () => {
-            green_arr.push(input.val());
-            render_greenLand();
+            if (input.val() !== '') {
+                green_arr.push(input.val());
+                render_greenLand();
+            }
         })
         for (let i = 0; i < green_arr.length; i++) {
             const div_1 = $('<div></div>')
@@ -733,7 +738,7 @@ const rander = () => {
             div_2.appendTo(div_1);
             const div_3 = $('<div></div>');
             div_3.appendTo(div_1);
-            const add = $(`<img src=${green_arr[i]} style="height: 200px; width: 200px;">`);
+            const add = $(`<img src=${green_arr[i]} style="height: 230px; width: 230px;">`);
             add.appendTo(div_2)
             const div_4 = $('<div></div>');
             div_4.appendTo(div_1);
@@ -742,6 +747,8 @@ const rander = () => {
                 'position': 'relative',
                 'top': '70px',
                 'border-radius': '20px ',
+                'border': '3px solid black',
+
             })
             add.on("mouseover", function () {
                 $(this).addClass("change")
@@ -762,13 +769,13 @@ const rander = () => {
                     'background-color': 'black',
                     'border': '2px solid white',
                 })
-               
+
 
                 while (lightbox[0].firstChild) {
                     lightbox[0].removeChild(lightbox[0].firstChild)
                 }
                 lightbox.append(img_2)
-               
+
             })
 
             lightbox.on('click', e => {
@@ -860,7 +867,7 @@ const rander = () => {
                 'border': '2px black ',
             })
 
-      
+
             add_emojy_4.on("mouseover", function () {
                 $(this).addClass("change_1")
             })
@@ -871,101 +878,101 @@ const rander = () => {
             })
             body1.append(lightbox);
             add_emojy_4.on("click", function () {
-             lightbox[0].classList.add('active')
-             const facebook = $(`<img src=${share[0]} style="height: 500px; width: 500px;"></img>`)
-            facebook.css({
-                'position': 'relative',
-                'top': '70px',
-                "margin": '15px',
-                'height': '60px',
-                'width': '60px',
-                'border-radius': '20px ',
-                'border': '2px black ',
-            })
-            const twitter = $(`<img src=${share[1]} style="height: 500px; width: 500px;"></img>`)
-
-            twitter.css({
-                'position': 'relative',
-                'top': '70px',
-                "margin": '15px',
-                'height': '50px',
-                'width': '50px',
-                'border-radius': '20px ',
-                'border': '2px black ',
-            })
-            const instagram = $(`<img src=${share[2]} style="height: 500px; width: 500px;"></img>`)
-
-            instagram.css({
-                'position': 'relative',
-                'top': '70px',
-                "margin": '15px',
-                'height': '60px',
-                'width': '60px',
-                'border-radius': '20px ',
-                'border': '2px black ',
-            })
-
-            const telegram = $(`<img src=${share[3]} style="height: 500px; width: 500px;"></img>`)
-
-            telegram.css({
-                'position': 'relative',
-                'top': '70px',
-                "margin": '15px',
-                'height': '60px',
-                'width': '60px',
-                'border-radius': '20px ',
-                'border': '2px black ',
-            })
-
-            facebook.on("mouseover", function () {
-                $(this).addClass("change_2")
-            })
-
-            facebook.on("mouseout", function () {
-                $(this).removeClass("change_2")
-
-            })
-            twitter.on("mouseover", function () {
-                $(this).addClass("change_2")
-            })
-
-            twitter.on("mouseout", function () {
-                $(this).removeClass("change_2")
-
-            })
-            instagram.on("mouseover", function () {
-                $(this).addClass("change_2")
-            })
-
-            instagram.on("mouseout", function () {
-                $(this).removeClass("change_2")
-
-            })
-            telegram.on("mouseover", function () {
-                $(this).addClass("change_2")
-            })
-
-            telegram.on("mouseout", function () {
-                $(this).removeClass("change_2")
-
-            })
-
-
-                    while (lightbox[0].firstChild) {
-                        lightbox[0].removeChild(lightbox[0].firstChild)
-                    }
-                    lightbox.append(facebook)
-                    lightbox.append(twitter)
-                    lightbox.append(instagram);
-                    lightbox.append(telegram);
-                   
+                lightbox[0].classList.add('active')
+                const facebook = $(`<img src=${share[0]} style="height: 500px; width: 500px;"></img>`)
+                facebook.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '60px',
+                    'width': '60px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
                 })
-    
-                lightbox.on('click', e => {
-                    if (e.target !== e.currentTarget) return
-                    lightbox[0].classList.remove('active')
-                })   
-            
+                const twitter = $(`<img src=${share[1]} style="height: 500px; width: 500px;"></img>`)
+
+                twitter.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '50px',
+                    'width': '50px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                })
+                const instagram = $(`<img src=${share[2]} style="height: 500px; width: 500px;"></img>`)
+
+                instagram.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '60px',
+                    'width': '60px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                })
+
+                const telegram = $(`<img src=${share[3]} style="height: 500px; width: 500px;"></img>`)
+
+                telegram.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'height': '60px',
+                    'width': '60px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                })
+
+                facebook.on("mouseover", function () {
+                    $(this).addClass("change_2")
+                })
+
+                facebook.on("mouseout", function () {
+                    $(this).removeClass("change_2")
+
+                })
+                twitter.on("mouseover", function () {
+                    $(this).addClass("change_2")
+                })
+
+                twitter.on("mouseout", function () {
+                    $(this).removeClass("change_2")
+
+                })
+                instagram.on("mouseover", function () {
+                    $(this).addClass("change_2")
+                })
+
+                instagram.on("mouseout", function () {
+                    $(this).removeClass("change_2")
+
+                })
+                telegram.on("mouseover", function () {
+                    $(this).addClass("change_2")
+                })
+
+                telegram.on("mouseout", function () {
+                    $(this).removeClass("change_2")
+
+                })
+
+
+                while (lightbox[0].firstChild) {
+                    lightbox[0].removeChild(lightbox[0].firstChild)
+                }
+                lightbox.append(facebook)
+                lightbox.append(twitter)
+                lightbox.append(instagram);
+                lightbox.append(telegram);
+
+            })
+
+            lightbox.on('click', e => {
+                if (e.target !== e.currentTarget) return
+                lightbox[0].classList.remove('active')
+            })
+
 
         }
     }
@@ -1223,7 +1230,6 @@ const test = () => {
 
         if ($("#loginInput").val() === username_arr[i] || $("#loginInput1").val() === password_arr[i]) {
             rander();
-
         }
     }
     $("#home").on('click', rander);
