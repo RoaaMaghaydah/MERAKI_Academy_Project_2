@@ -10,13 +10,11 @@ const flowers_arr = ["https://pbs.twimg.com/profile_images/883859744498176000/pj
     "https://empire-s3-production.bobvila.com/slides/26814/original/ganzia.jpg?1532362531", "https://sciencenotes.org/wp-content/uploads/2020/02/1280px-Glowing_flowers-1024x710.jpg", "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-182880589-1493334765.jpg"];
 
 const animals_arr = ["https://i.pinimg.com/originals/e3/32/3f/e3323fc80a203239e2a28ae23f83260a.jpg", "https://i.pinimg.com/originals/a4/0c/c0/a40cc0f58f64009050739f9c87853a82.jpg",
-    "https://img.jakpost.net/c/2019/06/25/2019_06_25_75103_1561445774._large.jpg", "https://i.redd.it/4m2ypc8v0p221.jpg", "https://sf.ezoiccdn.com/ezoimgfmt/meowlogy.com/wp-content/uploads/2017/04/Cute-animals-66.jpg?ezimgfmt=rs:392x581/rscb2/ng:webp/ngcb2",
-    "https://images.saymedia-content.com/.image/t_share/MTc0MzIwMjM1MTk1NjcxOTEy/top-ten-cutest-japanese-wild-animals.jpg"]
+    "https://img.jakpost.net/c/2019/06/25/2019_06_25_75103_1561445774._large.jpg", "https://i.redd.it/4m2ypc8v0p221.jpg", "https://sf.ezoiccdn.com/ezoimgfmt/meowlogy.com/wp-content/uploads/2017/04/Cute-animals-66.jpg?ezimgfmt=rs:392x581/rscb2/ng:webp/ngcb2"]
 
 const green_arr = ["https://2.bp.blogspot.com/-NRULCFKJGUw/VdKFaeFVZRI/AAAAAAAAAQg/jAL6_4-pkn8/s1600/natural-hd-wallpapers-for-pc.jpg", "http://1.bp.blogspot.com/-TtzbPEk88Mc/VnJ4qdOsZxI/AAAAAAAADd4/mSHI7N25dP0/s1600/%25D8%25B5%25D9%2588%25D8%25B1%2B%25D8%25B7%25D8%25A8%25D9%258A%25D8%25B9%25D8%25A9-%25D8%25B5%25D9%2588%25D8%25B1%2B%25D8%25B7%25D8%25A8%25D9%258A%25D8%25B9%25D9%258A%25D8%25A9-%2B%25D9%2585%25D9%2586%25D8%25A7%25D8%25B8%25D8%25B1%2B%25D8%25B7%25D8%25A8%25D9%258A%25D8%25B9%25D9%258A%25D8%25A9-%2B%25D8%25B5%25D9%2588%25D8%25B1%2B%25D8%25A3%25D9%2586%25D9%2587%25D8%25A7%25D8%25B1.jpg",
     "https://www.arabeuropa.com/wp-content/uploads/2019/02/7J9-H1H_thumb2.jpg", "http://lh3.ggpht.com/-olkU-hZWK3Q/T-l_MXj8AyI/AAAAAAAAEns/Rjtqk1bC8rA/7%252528J9%252529%252520%25252737F%252528HD%2525201_thumb%25255B2%25255D.jpg?imgmax=800",
-    "https://pic.i7lm.com/wp-content/uploads/2019/07/%D8%A3%D8%AD%D9%84%D9%8A-%D8%B5%D9%88%D8%B1-%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9-780x405.jpg",
-    "https://www.zyadda.com/wp-content/uploads/2021/02/%D8%B9%D8%A8%D8%A7%D8%B1%D8%A7%D8%AA-%D8%B9%D9%86-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D8%A9.jpg"]
+    "https://pic.i7lm.com/wp-content/uploads/2019/07/%D8%A3%D8%AD%D9%84%D9%8A-%D8%B5%D9%88%D8%B1-%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9-780x405.jpg"]
 
 const emojy = [`<svg id="img1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-x" viewBox="0 0 16 16">
 <path d="M6.854 7.146a.5.5 0 1 0-.708.708L7.293 9l-1.147 1.146a.5.5 0 0 0 .708.708L8 9.707l1.146 1.147a.5.5 0 0 0 .708-.708L8.707 9l1.147-1.146a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146z"/>
@@ -44,7 +42,7 @@ const gallery = $("<div class:'gallery_button'>  </div>");
 gallery.appendTo(body1);
 gallery.css({
     "display": "grid",
-    'grid-template-columns': '100px 100px 100px 100px',
+    'grid-template-columns': '100px 100px 100px 200px',
     'gap': '70px',
     'justify-content': 'start',
     'margin-left': "100px",
@@ -195,6 +193,9 @@ const rander = () => {
             div_2.appendTo(div_1);
             const div_3 = $('<div></div>');
             div_3.appendTo(div_1);
+            const div_4 = $('<div></div>');
+            div_4.appendTo(div_1);
+            
 
             const add = $(`<img src=${flowers_arr[i]} style="height: 200px; width: 200px;">`);
             add.appendTo(div_2)
@@ -547,6 +548,9 @@ const rander = () => {
             div_3.appendTo(div_1);
             const add = $(`<img src=${green_arr[i]} style="height: 200px; width: 200px;">`);
             add.appendTo(div_2)
+            const div_4 = $('<div></div>');
+            div_4.appendTo(div_1);
+            
             add.css({
                 'position': 'relative',
                 'top': '70px',
@@ -722,10 +726,10 @@ const rander = () => {
                             })
 
                    add_emojy_4.on("click", function () {
-                                telegram.appendTo(div_3);
-                                instagram.appendTo(div_3);
-                                facebook.appendTo(div_3);
-                                twitter.appendTo(div_3);    
+                                telegram.appendTo(div_4);
+                                instagram.appendTo(div_4);
+                                facebook.appendTo(div_4);
+                                twitter.appendTo(div_4);    
                  })
 
                 }
