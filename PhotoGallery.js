@@ -27,10 +27,10 @@ const emojy = [`<svg id="img1" xmlns="http://www.w3.org/2000/svg" width="16" hei
 <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
 </svg>`];
 
-const share=['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/1200px-Facebook_icon.svg.png',
-'https://log-logo.com/wp-content/uploads/2019/09/t3-1024x707.jpg',
-'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png',
-'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/1024px-Telegram_2019_Logo.svg.png']
+const share = ['https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/1200px-Facebook_icon.svg.png',
+    'https://log-logo.com/wp-content/uploads/2019/09/t3-1024x707.jpg',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/1024px-Telegram_2019_Logo.svg.png']
 
 let favorite = [];
 let username_arr = [];
@@ -38,6 +38,7 @@ let password_arr = [];
 
 ///////////////////////////////////////////////////////////////////
 const lightbox = $("<div id='lightbox'></div>")
+const lightbox1 = $("<div id='lightbox1'></div>")
 const gallery = $("<div class:'gallery_button'>  </div>");
 gallery.appendTo(body1);
 gallery.css({
@@ -69,10 +70,10 @@ const rander = () => {
         'width': '130px',
         'height': '36px',
         'font-size': '20px',
-         'font-family': `Times New Roman', Times, serif !important;`,
-         'font-weight': 'bold',
-         'font-style': 'italic',
-         'color': 'rgb(6, 49, 20)',
+        'font-family': `Times New Roman', Times, serif !important;`,
+        'font-weight': 'bold',
+        'font-style': 'italic',
+        'color': 'rgb(6, 49, 20)',
     });
 
     flowers.css({
@@ -83,10 +84,10 @@ const rander = () => {
         'width': '130px',
         'height': '36px',
         'font-size': '20px',
-            'font-family': `Times New Roman', Times, serif !important;`,
-            'font-weight': 'bold',
-            'font-style': 'italic',
-            'color': 'rgb(6, 49, 20)',
+        'font-family': `Times New Roman', Times, serif !important;`,
+        'font-weight': 'bold',
+        'font-style': 'italic',
+        'color': 'rgb(6, 49, 20)',
     });
     animals.css({
         'position': 'relative',
@@ -96,10 +97,10 @@ const rander = () => {
         'width': '130px',
         'height': '36px',
         'font-size': '20px',
-            'font-family': `Times New Roman', Times, serif !important;`,
-            'font-weight': 'bold',
-            'font-style': 'italic',
-            'color': 'rgb(6, 49, 20)',
+        'font-family': `Times New Roman', Times, serif !important;`,
+        'font-weight': 'bold',
+        'font-style': 'italic',
+        'color': 'rgb(6, 49, 20)',
     });
     greenLand.css({
         'position': 'relative',
@@ -107,8 +108,8 @@ const rander = () => {
         'background-color': 'cornsilk',
         'border-radius': '20px',
         'width': '130px',
-       'height': '36px',
-       'font-size': '20px',
+        'height': '36px',
+        'font-size': '20px',
         'font-family': `Times New Roman', Times, serif !important;`,
         'font-weight': 'bold',
         'font-style': 'italic',
@@ -195,7 +196,7 @@ const rander = () => {
             div_3.appendTo(div_1);
             const div_4 = $('<div></div>');
             div_4.appendTo(div_1);
-            
+
 
             const add = $(`<img src=${flowers_arr[i]} style="height: 200px; width: 200px;">`);
             add.appendTo(div_2)
@@ -550,7 +551,7 @@ const rander = () => {
             add.appendTo(div_2)
             const div_4 = $('<div></div>');
             div_4.appendTo(div_1);
-            
+
             add.css({
                 'position': 'relative',
                 'top': '70px',
@@ -575,11 +576,13 @@ const rander = () => {
                     'background-color': 'black',
                     'border': '2px solid white',
                 })
+               
 
                 while (lightbox[0].firstChild) {
                     lightbox[0].removeChild(lightbox[0].firstChild)
                 }
                 lightbox.append(img_2)
+               
             })
 
             lightbox.on('click', e => {
@@ -670,9 +673,9 @@ const rander = () => {
                 'width': '20px',
                 'border': '2px black ',
             })
-           
-            const facebook=$(`<img src=${share[0]} style="height: 500px; width: 500px;"></img>`)
-           
+
+           /* const facebook = $(`<img src=${share[0]} style="height: 500px; width: 500px;"></img>`)
+
             facebook.css({
                 'position': 'relative',
                 'top': '70px',
@@ -680,59 +683,87 @@ const rander = () => {
                 'height': '20px',
                 'width': '20px',
                 'border-radius': '20px ',
-                'border': '2px black ',})
-                const twitter=$(`<img src=${share[1]} style="height: 500px; width: 500px;"></img>`)
-               
-                twitter.css({
-                    'position': 'relative',
-                    'top': '70px',
-                    "margin": '15px',
-                    'height': '20px',
-                    'width': '20px',
-                    'border-radius': '20px ',
-                    'border': '2px black ',})
-                    const instagram=$(`<img src=${share[2]} style="height: 500px; width: 500px;"></img>`)
+                'border': '2px black ',
+            })*/
+            
+            add_emojy_4.on("mouseover", function () {
+                $(this).addClass("change_1")
+
+
+            })
+
+            add_emojy_4.on("mouseout", function () {
+                $(this).removeClass("change_1")
+
+
+            })
+            body1.append(lightbox);
+
+            add_emojy_4.on("click", function () {
+             lightbox[0].classList.add('active')
+             const facebook = $(`<img src=${share[0]} style="height: 500px; width: 500px;"></img>`)
+            facebook.css({
+                'position': 'relative',
+                'top': '70px',
+                "margin": '15px',
+                'height': '60px',
+                'width': '60px',
+                'border-radius': '20px ',
+                'border': '2px black ',
+            })
+            const twitter = $(`<img src=${share[1]} style="height: 500px; width: 500px;"></img>`)
+
+            twitter.css({
+                'position': 'relative',
+                'top': '70px',
+                "margin": '15px',
+                'height': '50px',
+                'width': '50px',
+                'border-radius': '20px ',
+                'border': '2px black ',
+            })
+            const instagram = $(`<img src=${share[2]} style="height: 500px; width: 500px;"></img>`)
+
+            instagram.css({
+                'position': 'relative',
+                'top': '70px',
+                "margin": '15px',
+                'height': '60px',
+                'width': '60px',
+                'border-radius': '20px ',
+                'border': '2px black ',
+            })
+
+            const telegram = $(`<img src=${share[3]} style="height: 500px; width: 500px;"></img>`)
+
+            telegram.css({
+                'position': 'relative',
+                'top': '70px',
+                "margin": '15px',
+                'height': '60px',
+                'width': '60px',
+                'border-radius': '20px ',
+                'border': '2px black ',
+            })
+
+
+                    while (lightbox[0].firstChild) {
+                        lightbox[0].removeChild(lightbox[0].firstChild)
+                    }
+                    lightbox.append(facebook)
+                    lightbox.append(twitter)
+                    lightbox.append(instagram);
+                    lightbox.append(telegram);
                    
-                    instagram.css({
-                        'position': 'relative',
-                        'top': '70px',
-                        "margin": '15px',
-                        'height': '20px',
-                        'width': '20px',
-                        'border-radius': '20px ',
-                        'border': '2px black ',})
-                    
-                        const telegram=$(`<img src=${share[3]} style="height: 500px; width: 500px;"></img>`)
-                      
-                        telegram.css({
-                            'position': 'relative',
-                            'top': '70px',
-                            "margin": '15px',
-                            'height': '20px',
-                            'width': '20px',
-                            'border-radius': '20px ',
-                            'border': '2px black ',})
+                })
     
-                            add_emojy_4.on("mouseover", function () {
-                                $(this).addClass("change_1")
-                                
-                                
-                             })
-                
-                            add_emojy_4.on("mouseout", function () {
-                                $(this).removeClass("change_1")
-                               
-                            
-                            })
+                lightbox.on('click', e => {
+                    if (e.target !== e.currentTarget) return
+                    lightbox[0].classList.remove('active')
+                })   
+            
 
-                   add_emojy_4.on("click", function () {
-                                telegram.appendTo(div_4);
-                                instagram.appendTo(div_4);
-                                facebook.appendTo(div_4);
-                                twitter.appendTo(div_4);    
-                 })
-
-                }
+        }
     }
 
     greenLand.on('click', render_greenLand);
@@ -745,7 +776,7 @@ const rander = () => {
             add.appendTo(gallery_1)
             add.css({
                 'position': 'relative',
-                 'top': '70px',
+                'top': '70px',
                 'border-radius': '20px ',
             })
             add.on("mouseover", function () {
@@ -764,7 +795,7 @@ const rander = () => {
         'grid-template-columns': '300px 300px 300px',
         'gap': '70px',
         'justify-content': 'start',
-        
+
     })
 }
 
@@ -831,11 +862,11 @@ const favoritFunction = () => {
             $(this).removeClass("change")
         })
 
-         removeFavorite.on('click', function () {
+        removeFavorite.on('click', function () {
             console.log("fff", favorite, i)
             favorite.splice(i, 1);
             localStorage.setItem("list_data_key", JSON.stringify(favorite));
-            favoritFunction() ;
+            favoritFunction();
         })
     }
 }
