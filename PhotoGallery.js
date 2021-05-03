@@ -217,15 +217,58 @@ const rander = () => {
             add.on('click', e => {
                 lightbox[0].classList.add('active')
                 const img_2 = $(`<img src=${flowers_arr[i]} style="height: 500px; width: 500px;"></img>`)
-                img_2.css({
-                    'background-color': 'black',
-                    'border': '2px solid white',
+                const filter1=$('<button style="height: 40px; width: 40px;">1</button>')
+                const filter2=$('<button style="height: 40px; width: 40px;">2</button>')
+                const filter3=$('<button style="height: 40px; width: 40px;">3</button>')
+                const filter4=$('<button style="height: 40px; width: 40px;">4</button>')
+                const filter0=$('<button style="height: 40px; width: 40px;">0</button>')
+                filter0.on('click',()=>{
+                    img_2.css({
+                        'background-color': 'black',
+                        'border': '2px solid white',   
+                    })
+                })
+                filter1.on('click',()=>{
+                    img_2.css({
+                        'background-color': 'black',
+                        'border': '2px solid white',
+                        'filter': 'contrast(200%)',
+                    })
+                })
+               
+                filter2.on('click',()=>{
+                    img_2.css({
+                        'background-color': 'black',
+                        'border': '2px solid white',
+                        'filter': 'grayscale(100%)',
+                    })
+                })
+                filter3.on('click',()=>{
+                    img_2.css({
+                        'background-color': 'black',
+                        'border': '2px solid white',  
+                         'filter': 'blur(5px)',          
+                    })
+                })
+                filter4.on('click',()=>{
+                    img_2.css({
+                        'background-color': 'black',
+                        'border': '2px solid white',           
+                       'filter': 'drop-shadow(16px 16px 20px red) invert(85%)',
+                    })
                 })
 
                 while (lightbox[0].firstChild) {
-                    lightbox[0].removeChild(lightbox[0].firstChild)
+                lightbox[0].removeChild(lightbox[0].firstChild)
                 }
                 lightbox.append(img_2)
+                lightbox.append(filter0);
+                lightbox.append(filter1);
+                lightbox.append(filter2);
+                lightbox.append(filter3);
+                lightbox.append(filter4);
+                
+
             })
 
             lightbox.on('click', e => {
@@ -1230,6 +1273,7 @@ const test = () => {
         if ($("#loginInput").val() === username_arr[i] || $("#loginInput1").val() === password_arr[i]) {
             rander();
         }
+        
     }
     $("#home").on('click', rander);
     $("#favorit").on('click', favoritFunction);

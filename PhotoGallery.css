@@ -73,12 +73,15 @@ left: 50px;
 }
 
 #theme{
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
+   
+     position: -webkit-sticky; /* Safari */
     position: sticky;
-    bottom:0;
-    left: 0;
+    bottom:  0;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+  
+    
 }
 
 #startLogin{
