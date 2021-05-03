@@ -1,9 +1,8 @@
 const body1 = $("body")
-const backgroundChange = $('#startDiv')
 const theme = $('#theme')
 
-$('#theme').on("click", () => {
-    backgroundChange.addClass(change_backg);
+theme.on("click", function () {
+    body1.addClass(change_backg);
 })
 ////////////////////////////////////////////////////////////////////
 const flowers_arr = ["https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg", "http://www.photon-echoes.com/images/nature/flowers/flower1.JPG",
@@ -217,51 +216,51 @@ const rander = () => {
             add.on('click', e => {
                 lightbox[0].classList.add('active')
                 const img_2 = $(`<img src=${flowers_arr[i]} style="height: 500px; width: 500px;"></img>`)
-                const filter1=$('<button style="height: 40px; width: 40px;">1</button>')
-                const filter2=$('<button style="height: 40px; width: 40px;">2</button>')
-                const filter3=$('<button style="height: 40px; width: 40px;">3</button>')
-                const filter4=$('<button style="height: 40px; width: 40px;">4</button>')
+                const filter1 = $('<button style="height: 40px; width: 40px;">1</button>')
+                const filter2 = $('<button style="height: 40px; width: 40px;">2</button>')
+                const filter3 = $('<button style="height: 40px; width: 40px;">3</button>')
+                const filter4 = $('<button style="height: 40px; width: 40px;">4</button>')
 
-                       
-                filter1.on('click',()=>{
+
+                filter1.on('click', () => {
                     img_2.css({
                         'background-color': 'black',
                         'border': '2px solid white',
                         'filter': 'contrast(200%)',
                     })
                 })
-               
-                filter2.on('click',()=>{
+
+                filter2.on('click', () => {
                     img_2.css({
                         'background-color': 'black',
                         'border': '2px solid white',
                         'filter': 'grayscale(100%)',
                     })
                 })
-                filter3.on('click',()=>{
+                filter3.on('click', () => {
                     img_2.css({
                         'background-color': 'black',
-                        'border': '2px solid white',  
-                         'filter': 'blur(5px)',          
+                        'border': '2px solid white',
+                        'filter': 'blur(5px)',
                     })
                 })
-                filter4.on('click',()=>{
+                filter4.on('click', () => {
                     img_2.css({
                         'background-color': 'black',
-                        'border': '2px solid white',           
-                       'filter': 'drop-shadow(16px 16px 20px red) invert(85%)',
+                        'border': '2px solid white',
+                        'filter': 'drop-shadow(16px 16px 20px red) invert(85%)',
                     })
                 })
 
                 while (lightbox[0].firstChild) {
-                lightbox[0].removeChild(lightbox[0].firstChild)
+                    lightbox[0].removeChild(lightbox[0].firstChild)
                 }
                 lightbox.append(img_2)
                 lightbox.append(filter1);
                 lightbox.append(filter2);
                 lightbox.append(filter3);
                 lightbox.append(filter4);
-                
+
 
             })
 
@@ -409,7 +408,7 @@ const rander = () => {
                     'border-radius': '20px ',
                     'border': '2px black ',
                 })
-                const share_in=$("<p id='share_m'>Share :</p>")
+                const share_in = $("<p id='share_m'>Share :</p>")
 
                 facebook.on("mouseover", function () {
                     $(this).addClass("change_2")
@@ -530,51 +529,51 @@ const rander = () => {
                 lightbox[0].classList.add('active')
                 lightbox[0].classList.add('active')
                 const img_2 = $(`<img src=${animals_arr[i]} style="height: 500px; width: 500px;"></img>`)
-                const filter1=$('<button style="height: 40px; width: 40px;">1</button>')
-                const filter2=$('<button style="height: 40px; width: 40px;">2</button>')
-                const filter3=$('<button style="height: 40px; width: 40px;">3</button>')
-                const filter4=$('<button style="height: 40px; width: 40px;">4</button>')
-                
-                       
-                filter1.on('click',()=>{
+                const filter1 = $('<button style="height: 40px; width: 40px;">1</button>')
+                const filter2 = $('<button style="height: 40px; width: 40px;">2</button>')
+                const filter3 = $('<button style="height: 40px; width: 40px;">3</button>')
+                const filter4 = $('<button style="height: 40px; width: 40px;">4</button>')
+
+
+                filter1.on('click', () => {
                     img_2.css({
                         'background-color': 'black',
                         'border': '2px solid white',
                         'filter': 'contrast(200%)',
                     })
                 })
-               
-                filter2.on('click',()=>{
+
+                filter2.on('click', () => {
                     img_2.css({
                         'background-color': 'black',
                         'border': '2px solid white',
                         'filter': 'grayscale(100%)',
                     })
                 })
-                filter3.on('click',()=>{
+                filter3.on('click', () => {
                     img_2.css({
                         'background-color': 'black',
-                        'border': '2px solid white',  
-                         'filter': 'blur(5px)',          
+                        'border': '2px solid white',
+                        'filter': 'blur(5px)',
                     })
                 })
-                filter4.on('click',()=>{
+                filter4.on('click', () => {
                     img_2.css({
                         'background-color': 'black',
-                        'border': '2px solid white',           
-                       'filter': 'drop-shadow(16px 16px 20px red) invert(85%)',
+                        'border': '2px solid white',
+                        'filter': 'drop-shadow(16px 16px 20px red) invert(85%)',
                     })
                 })
 
                 while (lightbox[0].firstChild) {
-                lightbox[0].removeChild(lightbox[0].firstChild)
+                    lightbox[0].removeChild(lightbox[0].firstChild)
                 }
                 lightbox.append(img_2)
                 lightbox.append(filter1);
                 lightbox.append(filter2);
                 lightbox.append(filter3);
                 lightbox.append(filter4);
-                
+
 
             })
 
@@ -721,7 +720,7 @@ const rander = () => {
                     'border': '2px black ',
                 })
 
-                const share_in=$("<p id='share_m'>Share :</p>")
+                const share_in = $("<p id='share_m'>Share :</p>")
 
                 facebook.on("mouseover", function () {
                     $(this).addClass("change_2")
@@ -844,51 +843,91 @@ const rander = () => {
             add.on('click', e => {
                 lightbox[0].classList.add('active')
                 const img_2 = $(`<img src=${green_arr[i]} style="height: 500px; width: 500px;"></img>`)
-                const filter1=$('<button style="height: 40px; width: 40px;">1</button>')
-                const filter2=$('<button style="height: 40px; width: 40px;">2</button>')
-                const filter3=$('<button style="height: 40px; width: 40px;">3</button>')
-                const filter4=$('<button style="height: 40px; width: 40px;">4</button>')
-                
-                       
-                filter1.on('click',()=>{
+                const filter1 = $('<button style="height: 50px; width: 50px;">1</button>')
+                const filter2 = $('<button style="height: 50px; width: 50px;">2</button>')
+                const filter3 = $('<button style="height: 50px; width: 50px;">3</button>')
+                const filter4 = $('<button style="height: 50px; width: 50px;">4</button>')
+                filter1.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                    'background-color': 'white',
+                    'color': 'rgb(6, 49, 20)',
+                })
+                filter2.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                    'background-color': 'white',
+                    'color': 'rgb(6, 49, 20)',
+                })
+                filter3.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                    'background-color': 'white',
+                    'color': 'rgb(6, 49, 20)',
+                })
+                filter4.css({
+                    'position': 'relative',
+                    'top': '70px',
+                    "margin": '15px',
+                    'border-radius': '20px ',
+                    'border': '2px black ',
+                    'background-color': 'white',
+                    'color': 'rgb(6, 49, 20)',
+                })
+                img_2.css({
+                    'background-color': 'black',
+                    'border': '2px solid white',
+
+                })
+
+                filter1.on('click', () => {
                     img_2.css({
                         'background-color': 'black',
                         'border': '2px solid white',
                         'filter': 'contrast(200%)',
                     })
                 })
-               
-                filter2.on('click',()=>{
+
+                filter2.on('click', () => {
                     img_2.css({
                         'background-color': 'black',
                         'border': '2px solid white',
                         'filter': 'grayscale(100%)',
                     })
                 })
-                filter3.on('click',()=>{
+                filter3.on('click', () => {
                     img_2.css({
                         'background-color': 'black',
-                        'border': '2px solid white',  
-                         'filter': 'blur(5px)',          
+                        'border': '2px solid white',
+                        'filter': 'blur(5px)',
                     })
                 })
-                filter4.on('click',()=>{
+                filter4.on('click', () => {
                     img_2.css({
                         'background-color': 'black',
-                        'border': '2px solid white',           
-                       'filter': 'drop-shadow(16px 16px 20px red) invert(85%)',
+                        'border': '2px solid white',
+                        'filter': 'drop-shadow(16px 16px 20px red) invert(85%)',
                     })
                 })
 
                 while (lightbox[0].firstChild) {
-                lightbox[0].removeChild(lightbox[0].firstChild)
+                    lightbox[0].removeChild(lightbox[0].firstChild)
                 }
                 lightbox.append(img_2)
                 lightbox.append(filter1);
                 lightbox.append(filter2);
                 lightbox.append(filter3);
                 lightbox.append(filter4);
-                
+
 
             })
 
@@ -1037,7 +1076,7 @@ const rander = () => {
                     'border-radius': '20px ',
                     'border': '2px black ',
                 })
-                const share_in=$("<p id='share_m'>Share :</p>")
+                const share_in = $("<p id='share_m'>Share :</p>")
 
                 facebook.on("mouseover", function () {
                     $(this).addClass("change_2")
@@ -1340,7 +1379,7 @@ const test = () => {
         if ($("#loginInput").val() === username_arr[i] || $("#loginInput1").val() === password_arr[i]) {
             rander();
         }
-        
+
     }
     $("#home").on('click', rander);
     $("#favorit").on('click', favoritFunction);
