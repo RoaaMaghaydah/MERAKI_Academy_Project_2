@@ -42,8 +42,6 @@ border: 2px solid white;
 
 };
 
-
-
 .perant{
 
     display: grid;
@@ -67,6 +65,7 @@ left: 50px;
  text-shadow:  0 0 10px white,0 0 5px rgb(0, 173, 52);
  border-bottom:5px solid rgb(6, 49, 20);
  width: fit-content;
+ border-radius: 4px;
  padding: 10px;
  margin-left:50px ;
 }

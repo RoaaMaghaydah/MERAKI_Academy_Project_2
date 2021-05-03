@@ -260,7 +260,7 @@ const rander = () => {
                 img_2.css({
                     'background-color': 'black',
                     'border': '2px solid white',
-                    
+
                 })
                 filter1.on('click', () => {
                     img_2.css({
@@ -365,7 +365,6 @@ const rander = () => {
                 'height': '20px',
                 'width': '20px',
                 'border': '2px black ',
-                //'cursor': 'block',
             })
             add_emojy_3.on("mouseover", function () {
                 $(this).addClass("change_1")
@@ -614,7 +613,7 @@ const rander = () => {
                 img_2.css({
                     'background-color': 'black',
                     'border': '2px solid white',
-                   
+
                 })
                 filter1.on('click', () => {
                     img_2.css({
@@ -1421,8 +1420,9 @@ $("#login").on('click', () => {
                 password_arr.push(password.val());
                 localStorage.setItem("list_username", JSON.stringify(username_arr));
                 localStorage.setItem("list_password", JSON.stringify(password_arr));
+                rander();
             }
-            rander();
+          
         }
     })
 
