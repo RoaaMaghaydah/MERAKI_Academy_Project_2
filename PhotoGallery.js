@@ -67,7 +67,7 @@ const rander = () => {
         'width': '130px',
         'height': '36px',
         'font-size': '20px',
-        'font-family': `Times New Roman', Times, serif !important;`,
+        'font-family': `Times New Roman', Times, serif`,
         'font-weight': 'bold',
         'font-style': 'italic',
         'color': 'rgb(6, 49, 20)',
@@ -81,7 +81,7 @@ const rander = () => {
         'width': '130px',
         'height': '36px',
         'font-size': '20px',
-        'font-family': `Times New Roman', Times, serif !important;`,
+        'font-family': `Times New Roman', Times, serif `,
         'font-weight': 'bold',
         'font-style': 'italic',
         'color': 'rgb(6, 49, 20)',
@@ -94,7 +94,7 @@ const rander = () => {
         'width': '130px',
         'height': '36px',
         'font-size': '20px',
-        'font-family': `Times New Roman', Times, serif !important;`,
+        'font-family': `Times New Roman', Times, serif !important`,
         'font-weight': 'bold',
         'font-style': 'italic',
         'color': 'rgb(6, 49, 20)',
@@ -107,7 +107,7 @@ const rander = () => {
         'width': '130px',
         'height': '36px',
         'font-size': '20px',
-        'font-family': `Times New Roman', Times, serif !important;`,
+        'font-family': `Times New Roman', Times, serif !important`,
         'font-weight': 'bold',
         'font-style': 'italic',
         'color': 'rgb(6, 49, 20)',
@@ -372,6 +372,7 @@ const rander = () => {
                     'border-radius': '20px ',
                     'border': '2px black ',
                 })
+                const share_in=$("<p id='share_m'>Share :</p>")
 
                 facebook.on("mouseover", function () {
                     $(this).addClass("change_2")
@@ -410,6 +411,7 @@ const rander = () => {
                 while (lightbox[0].firstChild) {
                     lightbox[0].removeChild(lightbox[0].firstChild)
                 }
+                lightbox.append(share_in)
                 lightbox.append(facebook)
                 lightbox.append(twitter)
                 lightbox.append(instagram);
@@ -1026,10 +1028,7 @@ const favoritFunction = () => {
         'grid-template-columns': '300px 300px 300px',
         'gap': '100px',
         'justify-content': 'start',
-        //'margin-left': "50px",
     })
-
-
 
     for (let i = 0; i < favorite.length; i++) {
         const div_22 = $('<div id="f"></div>')
@@ -1188,11 +1187,9 @@ $("#login").on('click', () => {
                 password_arr.push(password.val());
                 localStorage.setItem("list_username", JSON.stringify(username_arr));
                 localStorage.setItem("list_password", JSON.stringify(password_arr));
-
             }
             rander();
         }
-
     })
 
     const backButton = $('<button> <a href="PhotoGallrey.html">Back to Login </a></button>')
@@ -1212,9 +1209,7 @@ $("#login").on('click', () => {
         'position': 'relative',
         'left': '130px',
     })
-
 })
-
 
 const test = () => {
     let storedData = localStorage.getItem("list_username");

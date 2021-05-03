@@ -212,3 +212,12 @@ display: none;
         
      }
   }
+
+  #share_m{
+   
+    color: white;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;   
+  }
