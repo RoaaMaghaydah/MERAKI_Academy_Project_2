@@ -29,7 +29,6 @@ a:active{
     text-decoration:underline;
 }
 
-
 #div1{
 display: grid;
 grid-template-columns: 100px 100px 100px;
@@ -41,7 +40,6 @@ margin: 5px;
 border-radius: 20px;
 background-color: rgb(6, 49, 20);
 border: 2px solid white;
-/*color: white;*/
 
 };
 
@@ -190,11 +188,10 @@ display: none;
 
 @media only screen and (max-width: 530px) {
     body{
-
         background-size:470px 350px;
         background-repeat: no-repeat;    
     }
-    
+
     .p{       
         font-size: 50px;
      }  
@@ -209,15 +206,15 @@ display: none;
         margin-left: 50px;
         position:absolute;
         top: 360px;
-        
      }
   }
 
   #share_m{
-   
     color: white;
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     font-style: italic;   
   }
+
+  

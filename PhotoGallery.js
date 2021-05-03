@@ -50,10 +50,10 @@ gallery.css({
 const rander = () => {
     $('#startLogin').html('')
     gallery.html("");
-    const flowers = $('<button id="imgs_2"> flowers</button>');
-    const all = $('<button "> All</button>');
-    const animals = $('<button > animals</button>');
-    const greenLand = $('<button> nachural</button>');
+    const flowers = $('<button > flowers</button>');
+    const all = $('<button  > All</button>');
+    const animals = $('<button  > animals</button>');
+    const greenLand = $('<button > nachural</button>');
     all.appendTo(gallery);
     flowers.appendTo(gallery);
     animals.appendTo(gallery);
@@ -646,6 +646,8 @@ const rander = () => {
                     'border': '2px black ',
                 })
 
+                const share_in=$("<p id='share_m'>Share :</p>")
+
                 facebook.on("mouseover", function () {
                     $(this).addClass("change_2")
                 })
@@ -679,10 +681,10 @@ const rander = () => {
 
                 })
 
-
                 while (lightbox[0].firstChild) {
                     lightbox[0].removeChild(lightbox[0].firstChild)
                 }
+                lightbox.append(share_in)
                 lightbox.append(facebook)
                 lightbox.append(twitter)
                 lightbox.append(instagram);
@@ -925,6 +927,7 @@ const rander = () => {
                     'border-radius': '20px ',
                     'border': '2px black ',
                 })
+                const share_in=$("<p id='share_m'>Share :</p>")
 
                 facebook.on("mouseover", function () {
                     $(this).addClass("change_2")
@@ -959,10 +962,10 @@ const rander = () => {
 
                 })
 
-
                 while (lightbox[0].firstChild) {
                     lightbox[0].removeChild(lightbox[0].firstChild)
                 }
+                lightbox.append(share_in)
                 lightbox.append(facebook)
                 lightbox.append(twitter)
                 lightbox.append(instagram);
@@ -991,6 +994,7 @@ const rander = () => {
                 'position': 'relative',
                 'top': '70px',
                 'border-radius': '20px ',
+                'border': '2px solid black ',
             })
             add.on("mouseover", function () {
                 $(this).addClass("change")
@@ -1098,7 +1102,7 @@ $("#login").on('click', () => {
     p_username.appendTo(div_c1)
     const username = $('<input type="text">')
     username.appendTo(div_c1)
-    const p_password = $('<p> password:</p>')
+    const p_password = $('<p> Password:</p>')
     p_password.appendTo(div_c2)
     const password = $('<input type="password">')
     password.appendTo(div_c2);
@@ -1150,7 +1154,7 @@ $("#login").on('click', () => {
 
         'color': 'rgb(6, 49, 20)',
         'font-size': '20px',
-        'font-family': `Times New Roman', Times, serif;`,
+        'font-family': `Times New Roman', Times, serif`,
         'font-weight': 'bold',
         'font-style': 'italic',
     })
@@ -1158,7 +1162,7 @@ $("#login").on('click', () => {
 
         'color': 'rgb(6, 49, 20)',
         'font-size': '20px',
-        'font-family': `Times New Roman', Times, serif;`,
+        'font-family': "Times New Roman', Times, serif",
         'font-weight': 'bold',
         'font-style': 'italic',
     })
